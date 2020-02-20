@@ -18,7 +18,10 @@ for(let i in result){
         <div class="box">
             <img src="${result[i].image}" alt="imagine">
             <p>${result[i].name}</p>
-            <button>Detalii</button>
+            <div class="access">
+            <span>${result[i].price} $</span>
+            <button class="detalii">Detalii</button>
+            </div>
         </div>
     </div>`;
 }

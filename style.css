@@ -1,16 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+
+
 body,html{
     padding: 0;
     margin: 0;
-}
-
-.box{
-    border:1px solid black;
-    height:200px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
 }
 
 .wrapper{
@@ -19,11 +15,50 @@ body,html{
     justify-content: center;
 }
 
+.box{
+    max-height:100%;
+    margin: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 img{
-    height: 50px;
-    width: 50px;
+    height: 300px;
 }
 
 p{
-    width: 100px;
+    width: 350px;
+    text-align: center;
+}
+
+.access{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.detalii{
+    height: 30px;
+    width: 70px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid gold;
+}
+#wallpaper{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+#ham{
+    width: 15px;
+    height: 15px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
