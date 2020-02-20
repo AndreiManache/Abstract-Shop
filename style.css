@@ -53,9 +53,10 @@ p{
     margin-bottom: 100px;
 }
 
-#ham{
-    width: 15px;
-    height: 15px;
+.icon{
+    width: 18px;
+    height: 18px;
+    margin: 3px;
 }
 nav{
     display: flex;
