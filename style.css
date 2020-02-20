@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton|Righteous|Sacramento|Squada+One&display=swap');
 
 
 
 body,html{
     padding: 0;
     margin: 0;
-    font-family: 'Caveat', cursive;
-    font-size: 22px;
+    font-family: 'Righteous', cursive;
 }
 
 .wrapper{
@@ -31,6 +30,7 @@ img{
 p{
     width: 350px;
     text-align: center;
+    font-size: 26px;
 }
 
 .access{
@@ -46,11 +46,8 @@ p{
     background-color: transparent;
     border-radius: 5px;
     border: 1px solid gold;
-}
-#wallpaper{
-    width: 100%;
-    height: 400px;
-    margin-bottom: 100px;
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
 }
 
 .icon{
@@ -62,4 +59,70 @@ nav{
     display: flex;
     justify-content: space-between;
     margin: 20px;
+}
+
+#color1{
+    background-image: linear-gradient(to right, rgb(0, 102, 255), rgb(0, 153, 255));
+    height: 460px;
+}
+#color2{
+    background-image: linear-gradient(to right, rgb(0, 153, 255), rgb(179, 255, 0));
+    height: 460px;
+}
+#color3{
+    background-image: linear-gradient(to right, rgb(179, 255, 0), rgb(238, 255, 0));
+    height: 460px;
+}
+#color4{
+    background-image: linear-gradient(to right, rgb(238, 255, 0), rgb(255, 166, 0));
+    height: 460px;
+}
+#color5{
+    background-image: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 153, 0));
+    height: 460px;
+}
+#color6{
+    background-image: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 0, 0));
+    height: 460px;
+    margin-bottom: 50px;
+}
+
+.backGround{
+    display: flex;
+    position: relative;
+}
+
+#title{
+    padding: 0;
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -310px;
+    top: 50%;
+    margin-top: -130px;
+    font-family: 'Righteous', cursive;
+    color: #ffffff;
+}
+.title{
+    padding: 0;
+    font-size: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -310px;
+    top: 50%;
+    margin-top: -130px;
+    font-family: 'Righteous', cursive;
+    color: black;
+}
+
+.title2{
+    padding: 0;
+    font-size: 140px;
+    position: absolute;
+    left: 50%;
+    margin-left: -310px;
+    top: 50%;
+    margin-top: -130px;
+    font-family: 'Righteous', cursive;
+    color: #ffffff;
 }
