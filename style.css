@@ -102,7 +102,7 @@ nav{
     margin-top: -130px;
     font-family: 'Righteous', cursive;
     color: #ffffff;
-}
+}/*
 .title{
     padding: 0;
     font-size: 150px;
@@ -113,6 +113,7 @@ nav{
     margin-top: -130px;
     font-family: 'Righteous', cursive;
     color: black;
+    width: 100px;
 }
 
 .title2{
@@ -125,4 +126,9 @@ nav{
     margin-top: -130px;
     font-family: 'Righteous', cursive;
     color: #ffffff;
+    width: 100px;
 }
+
+@media (min-width: 768px){
+
+}*/
