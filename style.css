@@ -190,6 +190,16 @@ ul input:focus{
     
 }
 
+#loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
 @media only screen and (max-width: 767px){
     .backGround{
         height: 350px;
@@ -260,10 +270,4 @@ ul input:focus{
       height: 72px;
       opacity: 0;
     }
-  }
-
-  #loader{
-      display: flex;
-      align-items: center;
-      justify-content: center;
   }

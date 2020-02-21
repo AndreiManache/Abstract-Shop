@@ -3,6 +3,12 @@ let result;
 async function getList(){
     let response = await fetch("https://baza-de-date-project.firebaseio.com/.json");
     result = await response.json();
+
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector(".wrapper").classList.remove("hide");
+
+    // document.querySelector("h1").classList.remove("hide");
+
     draw();
     
 }
