@@ -9,7 +9,7 @@ body,html{
 }
 
 .wrapper{
-    display:flex; 
+    display:flex;
     flex-wrap:wrap;
     justify-content: center;
 }
@@ -23,6 +23,17 @@ body,html{
     align-items: center;
     flex-direction: column;
 }
+
+span{
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+}
+#logoTitle{
+    margin:0;
+    position: absolute;
+    top:11.7%;
+    color: rgba(0, 0, 0, 0.342);
+}
 #logo{
     height:140px;
 }
@@ -34,7 +45,6 @@ p{
     width: 350px;
     text-align: center;
     font-size: 28px;
-    margin: 0;
 }
 
 .access{
@@ -64,9 +74,7 @@ nav{
     justify-content: space-between;
     margin: 20px;
 }
-span{
-    font-size: 25px;
-}
+
 
 .backGround{
     display: flex;
