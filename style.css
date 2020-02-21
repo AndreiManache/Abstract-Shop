@@ -228,6 +228,11 @@ ul input:focus{
     .showDesktop{
         display:none;
     }
+
+    #icons{
+        margin-top: 20px;
+        margin-left: 50px;
+    }
 }
 
 
