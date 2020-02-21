@@ -64,7 +64,6 @@ p{
     font-size: 20px;
 }
 #icons{
-    margin-right:20px;
     margin-top: 20px;
 }
 .icon{
@@ -158,9 +157,40 @@ h1{
     text-align: center;
     font-family: 'Righteous', cursive;
     font-size: 40px;
+    
+}
+ul{
+    display: flex;
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
 }
 
-@media only screen and (max-width: 768px){
+ul li{
+
+    margin-right: 30px;
+    color: rgb(161, 161, 161);
+}
+
+ul input{
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 10px;
+    height: 22px;
+    text-align: center;
+}
+
+ul input:focus{
+    outline:none;
+}
+
+#nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media only screen and (max-width: 767px){
     .backGround{
         height: 350px;
     }
@@ -185,4 +215,15 @@ h1{
         font-size: 20px;
         margin-bottom: 0;
     }
+    .showDesktop{
+        display:none;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+
+.hideDesktop{
+    display: none;
+}
 }
