@@ -51,8 +51,8 @@ p{
 }
 
 .icon{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin: 4px;
 }
 nav{
@@ -61,74 +61,57 @@ nav{
     margin: 20px;
 }
 
-#color1{
-    background-image: linear-gradient(to right, rgb(0, 102, 255), rgb(0, 153, 255));
-    height: 460px;
-}
-#color2{
-    background-image: linear-gradient(to right, rgb(0, 153, 255), rgb(179, 255, 0));
-    height: 460px;
-}
-#color3{
-    background-image: linear-gradient(to right, rgb(179, 255, 0), rgb(238, 255, 0));
-    height: 460px;
-}
-#color4{
-    background-image: linear-gradient(to right, rgb(238, 255, 0), rgb(255, 166, 0));
-    height: 460px;
-}
-#color5{
-    background-image: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 153, 0));
-    height: 460px;
-}
-#color6{
-    background-image: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 0, 0));
-    height: 460px;
-    margin-bottom: 50px;
-}
-
 .backGround{
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0,102,255,1) 0%, rgba(12,214,158,1) 15%, rgba(214,249,1,1) 34%, rgba(255,244,0,1) 50%, rgba(255,192,0,1) 68%, rgba(255,141,0,1) 86%, rgba(255,64,0,1) 100%);
+    height: 500px;
+    margin-bottom: 80px;
 }
-
-#title{
-    padding: 0;
-    font-size: 150px;
-    position: absolute;
-    left: 50%;
-    margin-left: -310px;
-    top: 50%;
-    margin-top: -130px;
-    font-family: 'Righteous', cursive;
-    color: #ffffff;
-}/*
 .title{
     padding: 0;
-    font-size: 150px;
+    width:auto;
+    margin:0 auto;
+    font-size: 170px;
+    font-weight: bold;
     position: absolute;
-    left: 50%;
-    margin-left: -310px;
-    top: 50%;
-    margin-top: -130px;
     font-family: 'Righteous', cursive;
-    color: black;
-    width: 100px;
+    color: rgb(34, 28, 28);
 }
 
 .title2{
     padding: 0;
-    font-size: 140px;
+    width:auto;
+    margin:0 auto;
+    font-size: 150px;
+    font-weight: bold;
     position: absolute;
-    left: 50%;
-    margin-left: -310px;
-    top: 50%;
-    margin-top: -130px;
+    
     font-family: 'Righteous', cursive;
     color: #ffffff;
-    width: 100px;
 }
-
-@media (min-width: 768px){
-
-}*/
+.motto{
+    padding: 0;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 100px;
+    width: auto;
+    font-family: 'Righteous', cursive;
+    color: rgb(34, 28, 28);
+}
+@media only screen and (max-width: 768px){
+    .backGround{
+        height: 350px;
+    }
+    .title{
+        font-size: 70px;
+    }
+    .title2{
+        font-size: 65px;
+    }
+    .motto{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
