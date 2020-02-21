@@ -63,7 +63,10 @@ p{
     font-family: 'Squada One', cursive;
     font-size: 20px;
 }
-
+#icons{
+    margin-right:20px;
+    margin-top: 20px;
+}
 .icon{
     width: 30px;
     height: 30px;
@@ -72,7 +75,6 @@ p{
 nav{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
 }
 
 
@@ -171,5 +173,16 @@ h1{
     .motto{
         font-size: 20px;
         margin-top: 50px;
+    }
+    #logo{
+        height: 70px;
+        margin-left: -20px;
+    }
+    #logoTitle{
+        display: none;
+    }
+    h1{
+        font-size: 20px;
+        margin-bottom: 0;
     }
 }
