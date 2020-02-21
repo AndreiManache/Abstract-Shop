@@ -3,8 +3,8 @@ let result;
 async function getList(){
     let response = await fetch("https://baza-de-date-project.firebaseio.com/.json");
     result = await response.json();
-
     draw();
+    
 }
 
 
