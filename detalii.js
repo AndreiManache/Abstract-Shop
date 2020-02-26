@@ -16,3 +16,4 @@ function draw(){
     document.querySelector("#detalii").innerHTML = item.about;
 
 }
+

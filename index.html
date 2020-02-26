@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./carousel/flickity.css" media = "screen">
 		
 	</head>
-	<body onload="getList()">
+	<body id="index" onload="getList()">
 		
 		<nav>
 			<span>
@@ -25,15 +25,15 @@
 
 			<div id="nav">
 				<ul class="showDesktop">
-					<li>Contact</li>
-					<a href="./cart.html" target="_blank"><li>Shopping Cart</li></a>
-					<li>Admin</li>
-					<li><input type="text" placeholder="Search"></li>
+					<a href="./contact.html" target="_blank" class="link"><li>Contact</li></a>
+					<a href="./cart.html" target="_blank" class="link"><li>Shopping Cart</li></a>
+					<a href="./admin.html" target="_blank" class="link"><li>Admin</li></a>
+					<li><input type="text" placeholder="Search" onchange="drawSearch()"></li>
 				</ul>
 			</div>
 
 		</nav>
-
+		<h3 id="message"></h3>
 		<div class="backGround">
 			<p class="title">Abstract.</p>
 			<p class="title2">Abstract.</p>

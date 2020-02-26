@@ -155,8 +155,13 @@ h1{
     margin-top: 70px;
     text-align: center;
     font-family: 'Righteous', cursive;
-    font-size: 40px;
-    
+    font-size: 40px; 
+}
+#message{
+    margin-top: 70px;
+    text-align: center;
+    font-family: 'Open Sans';
+    margin-bottom: 70px;
 }
 ul{
     display: flex;
@@ -232,19 +237,37 @@ ul input:focus{
  height: 30px;
 }
 #alert{
-    height: 70px;
-    width: 200px;
+    max-height: 500px;
+    max-width: 500px;
     background-color: rgb(253, 49, 49);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
-#alert1{
-    height: 0;
-    width: 0;
+#alertTriangle{
+    height: 3px;
+    width: 3px;
     border:10px solid transparent;
-    border-bottom:10px solid green;
-
+    border-bottom:10px solid rgb(253, 49, 49);
 }
 
+.link{
+    text-decoration: none;
+}
+.alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    top: 13%;
+    right: 8%;
+}
+#alert p {
+    height: 100%;
+    width: 100%;
+}
 
 
 
