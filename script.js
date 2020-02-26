@@ -7,8 +7,6 @@ async function getList(){
     document.querySelector("#loader").style.display = "none";
     document.querySelector(".wrapper").classList.remove("hide");
 
-    // document.querySelector("h1").classList.remove("hide");
-
     draw();
     
 }
@@ -19,17 +17,25 @@ function draw(){
 
 
 for(let i in result){
-    str += `
-    <div class="col-xs-12 col-sm-6 col-lg-4">
-        <div class="box">
-            <img src="${result[i].image}" alt="imagine">
-            <p>${result[i].name}</p>
-            <div class="access">
-            <span>${result[i].price} $</span>
-            <button class="detalii">Detalii</button>
-            </div>
-        </div>
-    </div>`;
+    str += `<div class="col-xs-12 col-sm-6 col-lg-4">
+
+                <div class="box">
+
+                    <a href="detalii.html?idItem=${[i]}" id="item" target="_blank">
+
+                            <img src="${result[i].image}" alt="imagine">
+                            
+
+                        <div class="access">
+
+                            <span id="name">${result[i].name}</span>
+                            <span>${result[i].price} $</span>
+                    
+                        </div>
+                    </a>
+
+                </div>
+            </div>`;
 }
     document.querySelector(".wrapper").innerHTML = str;
 

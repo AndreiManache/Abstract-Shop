@@ -14,6 +14,11 @@ body,html{
     justify-content: center;
 }
 
+.wrapperDetalii{
+    display:flex;
+    margin-bottom: 250px;
+}
+
 .box{
     max-height:100%;
     margin: 10px;
@@ -27,22 +32,26 @@ body,html{
 span{
     font-size: 25px;
     font-family: 'Righteous', cursive;
+    margin-left: 10px;
 }
 #logoTitle{
     margin:0;
     position: absolute;
     top:11.7%;
     color: rgba(0, 0, 0, 0.342);
+    width: 350px;
+    text-align: center;
 }
 #logo{
     height:140px;
 }
 img{
     height: 300px;
+    margin: 0 auto;
 }
 
-p{
-    width: 350px;
+#name{
+    margin: 0 auto;
     text-align: center;
     font-size: 28px;
 }
@@ -50,19 +59,9 @@ p{
 .access{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 150px;
+    margin-top: 25px;
 }
 
-.detalii{
-    height: 30px;
-    width: 70px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid gold;
-    font-family: 'Squada One', cursive;
-    font-size: 20px;
-}
 #icons{
     margin-top: 20px;
 }
@@ -199,6 +198,64 @@ ul input:focus{
 .hide{
     display: none;
 }
+
+#item {
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+#poza{
+    height: 500px;
+    margin: 10px auto;
+}
+
+#detalii{
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 400px;
+}
+.detalii{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#addToCart{
+ background-color:rgb(253, 49, 49);
+ border-radius: 50px;
+ border: none;
+ margin-top: 50px;
+ font-weight: bold;
+ height: 30px;
+}
+#alert{
+    height: 70px;
+    width: 200px;
+    background-color: rgb(253, 49, 49);
+    border-radius: 20px;
+}
+#alert1{
+    height: 0;
+    width: 0;
+    border:10px solid transparent;
+    border-bottom:10px solid green;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 767px){
     .backGround{
