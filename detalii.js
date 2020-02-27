@@ -17,3 +17,10 @@ function draw(){
 
 }
 
+function drawSearch(){
+
+    let input = document.querySelector("#nav li input").value;
+    window.location = "index.html?id="+input;
+    return;
+
+}

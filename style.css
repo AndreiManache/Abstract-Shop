@@ -226,6 +226,7 @@ ul input:focus{
     display: flex;
     margin: 0 auto;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 #addToCart{

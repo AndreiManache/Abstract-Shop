@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./carousel/flickity.css" media = "screen">
 		
 	</head>
-	<body id="index" onload="getList()">
+	<body id="index" onload="getList() ;">
 		
 		<nav>
 			<span>
@@ -28,7 +28,9 @@
 					<a href="./contact.html" target="_blank" class="link"><li>Contact</li></a>
 					<a href="./cart.html" target="_blank" class="link"><li>Shopping Cart</li></a>
 					<a href="./admin.html" target="_blank" class="link"><li>Admin</li></a>
-					<li><input type="text" placeholder="Search" onchange="drawSearch()"></li>
+					<li>
+						<input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+					</li>
 				</ul>
 			</div>
 
@@ -53,7 +55,6 @@
 <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
 
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
