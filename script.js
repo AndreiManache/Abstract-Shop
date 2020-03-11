@@ -24,7 +24,7 @@ function draw(){
 
                         <div class="box">
 
-                            <a href="detalii.html?idItem=${[i]}" id="item" target="_blank">
+                            <a href="detalii.html?idItem=${[i]}" id="item">
 
                                     <img src="${result[i].image}" alt="imagine">
                                     

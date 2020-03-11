@@ -67,9 +67,26 @@ function addToCart(){
              "image": item.image ,
              "name": item.name ,
          }
- 
-         cart.push(itemForCart);
-     }
+
+         for(let i in cart){
+
+                    if(cart[i].idProdus === itemForCart.idProdus){
+
+                        alert("Produsul este deja in cos");
+                        return;
+                    }
+                }
+
+             cart.push(itemForCart);
+
+              document.querySelector(".alert").style.display = "flex";
+              document.querySelector("#alert p").innerText = `${itemForCart.name} added to cart`;
+              
+             let alerta = document.querySelector(".alert"); 
+             alerta.addEventListener('click', function clicked(){
+                document.querySelector(".alert").style.display = "none";
+              })
+            }
 
  
      localStorage.setItem("cart", JSON.stringify(cart));
