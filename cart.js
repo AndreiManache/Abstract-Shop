@@ -1,7 +1,7 @@
+let local = JSON.parse(localStorage.getItem("cart"));
 
 function draw(){
     let str = "";
-    let local = JSON.parse(localStorage.getItem("cart"));
     for(let i in local){
 
         
@@ -31,19 +31,31 @@ function draw(){
             </div>
 
             <div class="box1">
-            <span>${local[i].price} $</span>
+                <span>${local[i].price} $</span>
             </div>
 
             <div class="box1">
-            <button id="btn-del">Delete</button>
+                <button id="btn-del" onclick="erase(event)">Delete</button>
             </div>
                 </li>`
-
-    
-        
-
-    }
+            }
 
     document.querySelector("#ul").innerHTML = str;
+    
+    
+}
+
+function erase(event){
+
+    event.target.parentNode.parentNode.remove();
+
+    for(let i=0 ; i< local.length ; i++){
+
+        if(event.target.parentNode.parentNode.querySelector(".box1 p").innerText === local[i].name){
+            local.splice(local[i],1);
+            localStorage.setItem("cart",JSON.stringify(local));
+        }
+
+    }
 
 }
