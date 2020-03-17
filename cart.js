@@ -56,6 +56,6 @@ function erase(event){
             localStorage.setItem("cart",JSON.stringify(local));
         }
 
-    }
+    }  
 
 }

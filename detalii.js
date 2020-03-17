@@ -79,13 +79,17 @@ function addToCart(){
 
              cart.push(itemForCart);
 
-              document.querySelector(".alert").style.display = "flex";
-              document.querySelector("#alert p").innerText = `${itemForCart.name} added to cart`;
+              document.querySelector(".bg-modal").style.display = "block";
+              document.querySelector("#prodAdd img").src = `${itemForCart.image}`;
+              document.querySelector("#prodAdd p").innerText = `${itemForCart.name}`;
               
-             let alerta = document.querySelector(".alert"); 
-             alerta.addEventListener('click', function clicked(){
-                document.querySelector(".alert").style.display = "none";
+              
+             let btnPa = document.querySelector("#pa"); 
+             btnPa.addEventListener('click', function clicked(){
+                document.querySelector(".bg-modal").style.display = "none";
               })
+
+              
             }
 
  
