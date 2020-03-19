@@ -70,7 +70,7 @@ function updateCartTotal(event){
 
         for(let i=0 ; i< local.length ; i++){
             if(event === undefined){
-                return;
+                break;
             }
             let name = event.target.parentNode.parentNode.querySelector(".box1 p").innerText;
             if(name === local[i].name && event.target.value > local[i].stock){
