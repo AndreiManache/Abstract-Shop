@@ -69,9 +69,7 @@ function updateCartTotal(event){
         total = total + (price*quantity);
 
         for(let i=0 ; i< local.length ; i++){
-            if(event === undefined){
-                break;
-            }
+            
             let name = event.target.parentNode.parentNode.querySelector(".box1 p").innerText;
             if(name === local[i].name && event.target.value > local[i].stock){
                 alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
