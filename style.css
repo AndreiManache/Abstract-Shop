@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton|Righteous|Sacramento|Squada+One|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton|Righteous|Sacramento|Squada+One|Open+Sans|Zilla+Slab|Sen&display=swap');
 
 
 
@@ -130,7 +130,7 @@ nav{
     flex-direction: column;
     justify-content: space-around;
     height: 300px;
-    background-color: rgb(253, 49, 49);
+    background-color: rgba(253, 49, 49, 0.87);
 }
 
 .footer a{
@@ -228,6 +228,10 @@ ul input:focus{
     overflow: hidden;
     margin: 0 auto;
     width: 400px;
+    text-align: justify;
+    text-indent: 5%;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
 }
 .detalii{
     display: flex;
@@ -237,42 +241,18 @@ ul input:focus{
 }
 
 #addToCart{
- background-color:rgb(253, 49, 49);
+ background-color:yellow;
+ color: black;
  border-radius: 50px;
- border: none;
+ border: 1px solid rgb(52, 245, 3);
  margin-top: 50px;
+ font-size: 15px;
  font-weight: bold;
+ font-family: 'Sen', sans-serif;
+ width: 40%;
  height: 30px;
 }
-#alert{
-    max-height: 500px;
-    max-width: 500px;
-    background-color: rgb(253, 49, 49);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-#alertTriangle{
-    height: 3px;
-    width: 3px;
-    border:10px solid transparent;
-    border-bottom:10px solid rgb(253, 49, 49);
-} 
- .alert{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position:absolute;
-    top: 13%;
-    right: 8%;
-}
-#alert p {
-    height: 100%;
-    width: 90%;
-    margin: 10px auto;
-}
+
 
 .link{
     text-decoration: none;
@@ -326,6 +306,10 @@ ul input:focus{
     justify-content: center;
 }
 
+.box1 input{
+    width: 20%;
+}
+
 .bg-modal{
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
@@ -341,7 +325,7 @@ ul input:focus{
 #pop{
     background-color: #fefefe;
     margin: 15% auto;
-    width: 80%;
+    width: 50%;
 } 
 
 #prodAdd{
@@ -364,6 +348,23 @@ ul input:focus{
     margin: 0 auto;
     flex-grow: 1;
     text-align: center;
+}
+#pa{
+    background-color: transparent;
+    border: none;
+}
+#vzCos{
+    background-color: yellow;
+    border: 1px solid rgb(52, 245, 3);
+    border-radius: 50px;
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+    max-width: 10%;
+    position: relative;
+    left:70%;
 }
 
 
