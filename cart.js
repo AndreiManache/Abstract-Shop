@@ -66,9 +66,7 @@ function updateCartToatal(event){
         for(let i=0 ; i< local.length ; i++){
             let name = event.target.parentNode.parentNode.querySelector(".box1 p").innerText;
             if(name === local[i].name && event.target.value > local[i].stock){
-                alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`)
-                quantityElement.value = local[i].stock;
-                updateCartToatal(event);
+                alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
                 return;
             }
         }
@@ -77,7 +75,7 @@ function updateCartToatal(event){
             quantityElement.value = 1;
             return;
         }
-        console.log(quantityElement.value);
+        
     }
     document.getElementsByClassName("cart-total-price")[0].innerText ="$"+total;
     
