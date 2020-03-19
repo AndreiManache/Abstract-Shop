@@ -37,7 +37,6 @@ function draw(){
 function erase(event){
 
     event.target.parentNode.parentNode.remove();
-    updateCartToatal();
     for(let i=0 ; i< local.length ; i++){
 
         if(event.target.parentNode.parentNode.querySelector(".box1 p").innerText === local[i].name){
@@ -74,7 +73,6 @@ function updateCartTotal(event){
             if(name === local[i].name && event.target.value > local[i].stock){
                 alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
                 quantityElement.value = local[i].stock;
-                updateCartTotal();
                 return;
             }
         }
