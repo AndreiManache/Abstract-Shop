@@ -16,7 +16,7 @@ function draw(){
             </div>
 
             <div class="box1" id="one">
-            <input type="number" onchange="updateCartToatal(event)" class="cart-quantity-input" value="1">
+            <input type="number" onchange="updateCartTotal(event)" class="cart-quantity-input" value="1">
             </div>
 
             <div class="box1">
@@ -49,13 +49,18 @@ function erase(event){
 
 }
 
-function updateCartToatal(event){
+
+
+function updateCartTotal(event){
+    if(event === undefined){
+        return;
+    }
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
     let cartRows = cartItemContainer.getElementsByClassName("cart-row")
     let total = 0;
 
     for(let i=0; i<cartRows.length ; i++){
-
+    
         let cartRow = cartRows[i];
         let priceElement = cartRow.getElementsByClassName("cart-price")[0]
         let quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0]
@@ -67,6 +72,8 @@ function updateCartToatal(event){
             let name = event.target.parentNode.parentNode.querySelector(".box1 p").innerText;
             if(name === local[i].name && event.target.value > local[i].stock){
                 alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
+                quantityElement.value = local[i].stock;
+                updateCartTotal();
                 return;
             }
         }
