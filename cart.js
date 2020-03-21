@@ -16,7 +16,7 @@ function draw(){
             </div>
 
             <div class="box1" id="one">
-            <input type="number" onchange="updateCartTotal(event)" class="cart-quantity-input" value="1">
+            <input type="number" onchange="updateCartTotal()" class="cart-quantity-input" value="1">
             </div>
 
             <div class="box1">
@@ -24,15 +24,16 @@ function draw(){
             </div>
 
             <div class="box1">
-                <button id="btn-del" onclick="erase(event)">Delete</button>
+                <button id="btn-del" onclick="erase(event) ; updateCartTotal()">Delete</button>
             </div>
                 </li>`
 
             }
 
-    document.querySelector("#ul").innerHTML = str;
 
+    document.querySelector("#ul").innerHTML = str;       
 }
+
 
 function erase(event){
 
@@ -50,10 +51,7 @@ function erase(event){
 
 
 
-function updateCartTotal(event){
-    if(event === undefined){
-        return;
-    }
+function updateCartTotal(){
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
     let cartRows = cartItemContainer.getElementsByClassName("cart-row")
     let total = 0;
@@ -65,24 +63,27 @@ function updateCartTotal(event){
         let quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0]
         let price = parseFloat(priceElement.innerText.replace("$",''));
         let quantity = quantityElement.value;
-        total = total + (price*quantity);
 
-        for(let i=0 ; i< local.length ; i++){
-            
-            let name = event.target.parentNode.parentNode.querySelector(".box1 p").innerText;
-            if(name === local[i].name && event.target.value > local[i].stock){
-                alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
-                quantityElement.value = local[i].stock;
+
+            for(let i=0 ; i< local.length ; i++){
+
+                if(quantity > local[i].stock){
+                    alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
+                    quantityElement.value = local[i].stock;
+                    updateCartTotal();
+                    return;
+                }
+            }
+
+            if(quantity < 1){
+                quantityElement.value = 1;
                 return;
             }
-        }
-
-        if(quantity < 1){
-            quantityElement.value = 1;
-            return;
-        }
+                
+        total = total + (price*quantity);
         
     }
+    
     document.getElementsByClassName("cart-total-price")[0].innerText ="$"+total;
     
 }

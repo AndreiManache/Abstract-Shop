@@ -224,7 +224,7 @@ ul input:focus{
 }
 
 #detalii{
-    max-height: 300px;
+    max-height: 295px;
     overflow: hidden;
     margin: 0 auto;
     width: 400px;
@@ -365,6 +365,12 @@ ul input:focus{
     max-width: 10%;
     position: relative;
     left:70%;
+}
+.btn-ipt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
 }
 
 

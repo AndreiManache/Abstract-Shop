@@ -12,10 +12,12 @@ async function getItem(){
 }
 
 function draw(){
-
     document.querySelector("#poza").src = item.image;
-    document.querySelector("#detalii").innerHTML = item.about;
-
+    document.querySelector("#detalii").innerHTML = `<span id="numeDetalii">${item.name}</span>`+`<p>${item.about}</p>`;
+    document.querySelector(".btn-ipt").innerHTML = 
+    `<button id="addToCart" onclick="addToCart()" style="margin: 15px;">ADD TO CART</button>
+    <input type="number" value="1" style="width: 8%; height: 30%;" class="ipt">`;
+    
 }
 
 function drawSearch(){
@@ -33,7 +35,7 @@ function addToCart(){
     let cartStr = localStorage.getItem("cart");
     let cart;
     let found = false;
-
+    
 
     if(cartStr === null){
         cart = [];
@@ -49,7 +51,7 @@ function addToCart(){
             if(item.stock >= 1){
             cart[i].quantity ++;
             }else{
-                alert("Nu mai sunt BOSS");
+                alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
             }
 
         found = true;
