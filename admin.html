@@ -6,7 +6,7 @@
     <title>Abstract - Admin</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>  
+<body onload="getDb()">  
     <nav>
         <span>
         <a href="./index.html"><img id="logo" src="./images/Logo.png" alt="logo"></a>
@@ -29,18 +29,23 @@
         </div>
 
     </nav>
-
-    <div class="wrapperCart">
-        <table>
-            <thead>
-                
+    <div class="gestionare">
+        <h2 style="margin: 30px;">Products management</h2>
+        <button id="add_btn">+ Add Product</button>
+    </div>
+    
+    <div class="adminWrapper">
+        <table id="table">
+            <thead style="background-color: rgba(253, 49, 49, 0.87);">
+                <tr>
+                    <td>Image</td>
+                    <td><p>Name</p></td>
+                    <td><p>Price</p></td>
+                    <td><p>Quantity</p></td>
+                    <td></td>
+                </tr>
             </thead>
-            <tbody>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-            </tbody>
+            <tbody class="item_list"></tbody>
         </table>
     </div>
 
@@ -68,6 +73,6 @@
 
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./admin.js"></script>
 </body>
 </html>

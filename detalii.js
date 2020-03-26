@@ -27,10 +27,6 @@ function drawSearch(){
     return;
 }
 
-
-
-
-
 function addToCart(){
     let cartStr = localStorage.getItem("cart");
     let cart;

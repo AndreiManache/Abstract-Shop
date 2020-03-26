@@ -34,7 +34,6 @@ function draw(){
     document.querySelector("#ul").innerHTML = str;       
 }
 
-
 function erase(event){
 
     event.target.parentNode.parentNode.remove();
@@ -48,8 +47,6 @@ function erase(event){
     }  
 
 }
-
-
 
 function updateCartTotal(){
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
@@ -84,6 +81,16 @@ function updateCartTotal(){
         
     }
     
-    document.getElementsByClassName("cart-total-price")[0].innerText ="$"+total;
+    document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total}`;
+
+    if(cartRows.length == 0){
+        document.getElementsByClassName("total")[0].style.display = "none";
+        document.getElementById("message2").innerText = "Cosul de cumparaturi este gol!";
+
+
+        
+    }
+
     
 }
+
