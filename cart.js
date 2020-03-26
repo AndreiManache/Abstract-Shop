@@ -7,9 +7,12 @@ function draw(){
         
 
         str += `<li id="li" class="cart-row">
+        <a href="detalii.html?idItem=${local[i].idProdus}" id="item">
             <div class="box1">
-            <img src="${local[i].image}" id="imgCart">
+                <img src="${local[i].image}" id="imgCart">
             </div>
+        </a>
+            
 
             <div class="box1">
             <p>${local[i].name}</p>

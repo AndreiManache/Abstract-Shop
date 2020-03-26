@@ -16,23 +16,24 @@ function drawAdmin(){
     for(let i in result){
 
         str += 
-        `<tr class="list_row">
-            <td class="row_data">
-                <img src="${result[i].image}" class="row_img" alt="imagine">
-            </td>
-            <td class="row_data">
-                <p>${result[i].name}</p>
-            </td>
-            <td class="row_data">
-                <p>${result[i].price}</p>
-            </td>
-            <td class="row_data">
-                <p>${result[i].stock}</p>
-            </td>
-            <td class="row_data">
-                <button onclick="erase(event)">Remove</button>
-            </td>
-        </tr>`
+        `<a href="detalii.html?idItem=1" id="item">
+            <tr class="list_row">
+                <td class="row_data">
+                    <img src="${result[i].image}" class="row_img" alt="imagine">
+                </td>
+                <td class="row_data">
+                    <p>${result[i].name}</p>
+                </td>
+                <td class="row_data">
+                    <p>${result[i].price}</p>
+                </td>
+                <td class="row_data">
+                    <p>${result[i].stock}</p>
+                </td>
+                <td class="row_data">
+                    <button onclick="erase(event)">Remove</button>
+                </td>
+            </tr></a>`
 
     }
 

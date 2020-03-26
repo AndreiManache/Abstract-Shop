@@ -418,6 +418,9 @@ ul input:focus{
     width: 200px;
     font-size: 20px;
 }
+.main_img:hover{
+    opacity: 0.5;
+}
 
 
 
