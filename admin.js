@@ -1,4 +1,18 @@
 let result;
+let btn = document.querySelector("#add_btn");
+
+btn.addEventListener('click', function(){
+    document.querySelector(".bg-modal-admin").style.display = "block";
+
+    let btn2 = document.querySelector('#btn2');
+    let btn3 = document.querySelector('#btn3');
+
+    btn3.addEventListener('click', function(){
+        document.querySelector(".bg-modal-admin").style.display = "none";
+    })
+
+});
+
 
 async function getDb(){
 

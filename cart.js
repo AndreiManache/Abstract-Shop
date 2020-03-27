@@ -6,30 +6,31 @@ function draw(){
     for(let i in local){
         
 
-        str += `<li id="li" class="cart-row">
-        <a href="detalii.html?idItem=${local[i].idProdus}" id="item">
-            <div class="box1">
-                <img src="${local[i].image}" id="imgCart">
-            </div>
-        </a>
+        str += `
+            <a href="detalii.html?idItem=${local[i].idProdus}" id="item">
+                <li id="li" class="cart-row">
+                <div class="box1">
+                    <img src="${local[i].image}" id="imgCart">
+                </div>
+                </a>
+
+                <div class="box1">
+                <p>${local[i].name}</p>
+                </div>
+
+                <div class="box1" id="one">
+                <input type="number" onchange="updateCartTotal()" class="cart-quantity-input" value="1">
+                </div>
+
+                <div class="box1">
+                    <span class="cart-price">$${local[i].price}</span>
+                </div>
             
-
-            <div class="box1">
-            <p>${local[i].name}</p>
-            </div>
-
-            <div class="box1" id="one">
-            <input type="number" onchange="updateCartTotal()" class="cart-quantity-input" value="1">
-            </div>
-
-            <div class="box1">
-                <span class="cart-price">$${local[i].price}</span>
-            </div>
-
-            <div class="box1">
-                <button id="btn-del" onclick="erase(event) ; updateCartTotal()">Delete</button>
-            </div>
-                </li>`
+                <div class="box1">
+                    <button id="btn-del" onclick="erase(event) ; updateCartTotal()">Delete</button>
+                </div>
+                </li>
+                `
 
             }
 

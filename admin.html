@@ -7,6 +7,44 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body onload="getDb()">  
+
+    <div class="bg-modal-admin" >
+        
+        <div id="pop_admin">
+
+            <div class="wpr_admin">
+                <p>Add a product</p>
+                <button id="btn2">Save</button>
+                <button id="btn3">Cancel</button>
+            </div>
+
+            <div id="prodAdd_admin">
+                <div>
+                    <p>Name</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>Image</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>Price</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>Quantity</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>Description</p>
+                    <textarea cols="30" rows="10" style="width: 70%;"></textarea>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
     <nav>
         <span>
         <a href="./index.html"><img id="logo" src="./images/Logo.png" alt="logo"></a>
@@ -29,6 +67,7 @@
         </div>
 
     </nav>
+
     <div class="gestionare">
         <h2 style="margin: 30px;">Products management</h2>
         <button id="add_btn">+ Add Product</button>
