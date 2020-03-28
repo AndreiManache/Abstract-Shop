@@ -1,5 +1,4 @@
 let result;
-let btn = document.querySelector("#add_btn");
 
 async function getDb(){
 
@@ -8,6 +7,10 @@ async function getDb(){
 
     drawAdmin();
 }
+
+let btn = document.querySelector("#add_btn");
+
+
 
 btn.addEventListener('click', function(){
     document.querySelector(".bg-modal-admin").style.display = "block";
@@ -48,7 +51,7 @@ function saveProduct(){
 
 
 function drawAdmin(){
-
+    
     let str = "";
 
     for(let i in result){
@@ -69,6 +72,9 @@ function drawAdmin(){
                     <p>${result[i].stock}</p>
                 </td>
                 <td class="row_data">
+                    <button data-id="${i}" class="mdf">Modify</button>
+                </td>
+                <td class="row_data">
                     <button data-id="${i}" onclick="erase(event)">Remove</button>
                 </td>
             </tr></a>`
@@ -76,7 +82,6 @@ function drawAdmin(){
     }
 
     document.querySelector(".item_list").innerHTML = str;
-
 }
 
 function drawSearch(){
