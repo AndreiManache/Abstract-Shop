@@ -89,7 +89,7 @@ function updateCartTotal(){
 
     if(cartRows.length == 0){
         document.getElementsByClassName("total")[0].style.display = "none";
-        document.getElementById("message2").innerText = "Cosul de cumparaturi este gol!";
+        document.getElementById("message2").innerText = "The cart is empty!";
 
 
         

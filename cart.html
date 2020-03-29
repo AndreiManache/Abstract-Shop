@@ -10,22 +10,24 @@
 <body onload="draw() ; updateCartTotal()">  
 
     <nav>
-        <span>
-        <a href="./index.html"><img id="logo" src="./images/Logo.png" alt="logo"></a>
-        </span>
+        <div id="logo">
+            <a href="./index.html"><img src="./images/Logo.png" alt="logo"></a>
+        </div>
 
-        <div id="icons" class="hideDesktop">
+        <div class="hideDesktop">
                 <img src="./images/search.svg" alt="search" class="icon">
                 <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
                 <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
         </div>
 
-        <div id="nav">
-            <ul class="showDesktop">
-                <a href="./contact.html"  class="link"><li>Contact</li></a>
-                <a href="./cart.html"  class="link"><li>Shopping Cart</li></a>
-                <a href="./admin.html"  class="link"><li>Admin</li></a>
-                <li><input type="text" placeholder="Search"></li>
+        <div class="showDesktop">
+            <ul>
+                <a href="./contact.html" class="link"><li>Contact</li></a>
+                <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
+                <a href="./admin.html" class="link"><li>Admin</li></a>
+                <li>
+                    <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+                </li>
             </ul>
         </div>
 
@@ -43,11 +45,11 @@
         </div>
     </div>
 
-    <div class="footer">
+    <footer>
         <div>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Refund Policy</a>
+            <a href="#" class="a">Terms of Service</a>
+            <a href="#" class="a">Privacy Policy</a>
+            <a href="#" class="a">Refund Policy</a>
         </div>
 
         <div>
@@ -65,7 +67,7 @@
             <img src="./images/visa.svg" alt="vs" class="icon">
         </div>
 
-    </div>
+    </footer>
 
     <script src="./detalii.js"></script>
     <script src="./cart.js"></script>

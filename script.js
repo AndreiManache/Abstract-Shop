@@ -55,17 +55,21 @@ function draw(){
         document.querySelector(".carousel").style.display = "block";
 
     }else if(found === false){
+        
         document.querySelector(".backGround").style.display = "none";
         document.querySelector(".carousel").style.display = "none";
-    document.querySelector("#message").innerHTML = `Ooops! There were no results for "${input}"... `;
-    document.querySelector("#nav li input").value = "";
-
+        document.querySelector("#h1").style.display = "none";
+        document.querySelector("#message").innerHTML = `Ooops! There were no results for "${input}"... `;
+        document.querySelector(".bk_to_school").style.display = "block";
+        document.querySelector(".showDesktop input").value = "";
+        
     }else{
         document.querySelector(".backGround").style.display = "none";
         document.querySelector(".carousel").style.display = "none";
+        document.querySelector("#h1").style.display = "none";
         document.querySelector("#message").style.display = "block";
         document.querySelector("#message").innerHTML = `Search results for "${input}"... `;
-        document.querySelector("#nav li input").value = "";
+        document.querySelector(".showDesktop input").value = "";
     }
 
     document.querySelector(".wrapper").innerHTML = str;
@@ -74,12 +78,11 @@ function draw(){
 
 function drawSearch(){
 
-    let input = document.querySelector("#nav li input").value;
+    let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
     
 }
 
-    
 
 
 

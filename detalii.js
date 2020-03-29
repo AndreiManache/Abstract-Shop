@@ -15,14 +15,15 @@ function draw(){
     document.querySelector("#poza").src = item.image;
     document.querySelector("#detalii").innerHTML = `<span id="numeDetalii">${item.name}</span>`+`<p>${item.about}</p>`;
     document.querySelector(".btn-ipt").innerHTML = 
-    `<button id="addToCart" onclick="addToCart()" style="margin: 15px;">ADD TO CART</button>
+    `<p style="font-size:200%">$${item.price}</p>
+    <button id="addToCart" onclick="addToCart()" style="margin: 15px;">ADD TO CART</button>
     <input type="number" value="1" style="width: 8%; height: 30%;" class="ipt">`;
     
 }
 
 function drawSearch(){
 
-    let input = document.querySelector("#nav li input").value;
+    let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
     return;
 }

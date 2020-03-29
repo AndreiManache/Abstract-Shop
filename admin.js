@@ -86,9 +86,9 @@ function drawAdmin(){
 
 function drawSearch(){
 
-    let input = document.querySelector("#nav li input").value;
+    let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
-    document.querySelector("#nav li input").value = "";
+    document.querySelector(".showDesktop input").value = "";
     return;
 }
 
