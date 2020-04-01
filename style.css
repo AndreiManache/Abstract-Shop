@@ -88,29 +88,27 @@ span{
 }
 .title{
     margin:0 auto;
-    font-size: 16vw;
+    font-size: 14vw;
     font-weight: bold;
     position: absolute;
-    top: 30%;
+    top: 22%;
     font-family: 'Righteous', cursive;
     color: rgb(34, 28, 28);
 }
 
 .title2{
-    padding: 0;
     margin:0 auto;
-    top:30%;
-    font-size: 15vw;
+    top:22%;
+    font-size: 13vw;
     font-weight: bold;
     position: absolute;
     font-family: 'Righteous', cursive;
     color: #ffffff;
 }
 .motto{
-    padding: 0;
-    font-size: 190%;
+    font-size: 2.3vw;
     position: absolute;
-    top:55%;
+    bottom:20%;
     font-family: 'Righteous', cursive;
     color: rgb(34, 28, 28);
 }
