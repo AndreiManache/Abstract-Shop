@@ -88,7 +88,7 @@ span{
 }
 .title{
     margin:0 auto;
-    font-size: 850%;
+    font-size: 16vw;
     font-weight: bold;
     position: absolute;
     top: 30%;
@@ -100,7 +100,7 @@ span{
     padding: 0;
     margin:0 auto;
     top:30%;
-    font-size: 800%;
+    font-size: 15vw;
     font-weight: bold;
     position: absolute;
     font-family: 'Righteous', cursive;
@@ -199,7 +199,7 @@ ul input:focus{
 }
 
 .hide{
-    display: none;
+    display: none!important;
 }
 
 #item {

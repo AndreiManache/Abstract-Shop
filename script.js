@@ -51,7 +51,7 @@ function draw(){
     if(input === ""){
 
         document.querySelector("#message").style.display = "none";
-        document.querySelector(".backGround").style.display = "flex";
+        document.querySelector(".backGround").style.display = "";
         document.querySelector(".carousel").style.display = "block";
 
     }else if(found === false){
