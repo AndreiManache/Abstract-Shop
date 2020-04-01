@@ -40,8 +40,6 @@ nav{
     margin-bottom: 250px;
 }
 .box{
-    max-height:100%;
-    margin: 10px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
@@ -55,7 +53,8 @@ span{
     margin-left: 10px;
 }
 .main_img{
-    height: 300px;
+    max-width: 100%;
+    max-height: 300px;
     margin: 0 auto;
 }
 

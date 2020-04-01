@@ -31,8 +31,8 @@ function draw(){
 
                                     <div class="access">
 
-                                        <span id="name">${result[i].name}</span>
-                                        <span>${result[i].price}$</span>
+                                        <div id="name">${result[i].name}</div>
+                                        <div>${result[i].price}$</div>
                                 
                                     </div>
                             </a>
