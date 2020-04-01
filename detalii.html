@@ -28,29 +28,29 @@
 
     </div>
 
-    <nav>
-        <div id="logo">
-            <a href="./index.html"><img src="./images/Logo.png" alt="logo"></a>
-        </div>
+    <div class="nav">
+			
+        <a href="./index.html" class="img"><img src="./images/Logo.png" alt="logo"></a>
+    
+    
 
-        <div class="hideDesktop">
-                <img src="./images/search.svg" alt="search" class="icon">
-                <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
-                <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
-        </div>
+    <div class="showDesktop">
+        <ul>
+            <a href="./contact.html" class="link"><li>Contact</li></a>
+            <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
+            <a href="./admin.html" class="link"><li>Admin</li></a>
+            <li>
+                <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+            </li>
+        </ul>
+    </div>
 
-        <div class="showDesktop">
-            <ul>
-                <a href="./contact.html" class="link"><li>Contact</li></a>
-                <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
-                <a href="./admin.html" class="link"><li>Admin</li></a>
-                <li>
-                    <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
-                </li>
-            </ul>
-        </div>
-
-    </nav>
+    <div class="hideDesktop">
+        <img src="./images/search.svg" alt="search" class="icon">
+        <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
+        <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+    </div>
+    </div>
 
     <div class="wr-det">
         

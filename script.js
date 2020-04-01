@@ -50,24 +50,20 @@ function draw(){
 
     if(input === ""){
 
-        document.querySelector("#message").style.display = "none";
-        document.querySelector(".backGround").style.display = "";
-        document.querySelector(".carousel").style.display = "block";
-
     }else if(found === false){
         
-        document.querySelector(".backGround").style.display = "none";
-        document.querySelector(".carousel").style.display = "none";
-        document.querySelector("#h1").style.display = "none";
+        document.querySelector(".backGround").classList.add('hide');
+        document.querySelector(".carousel").classList.add('hide');
+        document.querySelector("#h1").classList.add('hide');
+        document.querySelector("#message").classList.remove('hide');
         document.querySelector("#message").innerHTML = `Ooops! There were no results for "${input}"... `;
-        document.querySelector(".bk_to_school").style.display = "block";
         document.querySelector(".showDesktop input").value = "";
         
     }else{
-        document.querySelector(".backGround").style.display = "none";
-        document.querySelector(".carousel").style.display = "none";
-        document.querySelector("#h1").style.display = "none";
-        document.querySelector("#message").style.display = "block";
+        document.querySelector(".backGround").classList.add('hide');
+        document.querySelector(".carousel").classList.add('hide');
+        document.querySelector("#h1").classList.add('hide');
+        document.querySelector("#message").classList.remove('hide');
         document.querySelector("#message").innerHTML = `Search results for "${input}"... `;
         document.querySelector(".showDesktop input").value = "";
     }
