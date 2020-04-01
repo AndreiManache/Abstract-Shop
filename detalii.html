@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detallii</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./resposive/grid.css">
 </head>
 <body onload="getItem()">
 
@@ -51,10 +52,15 @@
 
     </nav>
 
-    <div class="wrapperDetalii">
+    <div class="wr-det">
         
-        <img src="" alt="Img Item" id="poza">
-
+        <div class="col-xs-12 col-sm-12 col-lg-6">
+            <div class="wr-img">
+                <img src="" alt="Img Item" id="poza">
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-6">
             <div class="detalii">    
             
                 <div id="detalii"></div>
@@ -62,6 +68,8 @@
                 <p>In Stock <img src="./images/check.svg" alt="check" class="icon"></p>
 
             </div>
+        </div>
+
     </div>
 
     <footer>
