@@ -27,6 +27,10 @@ function drawSearch(){
     window.location = "index.html?id="+input;
     return;
 }
+function drawMobileSearch(){
+    let input = document.querySelector("#search").value;
+    window.location = "index.html?id="+input;
+}
 
 function addToCart(){
     let cartStr = localStorage.getItem("cart");

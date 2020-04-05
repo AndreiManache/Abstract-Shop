@@ -76,7 +76,12 @@ function drawSearch(){
 
     let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
-    
+
+}
+
+function drawMobileSearch(){
+    let input = document.querySelector("#search").value;
+    window.location = "index.html?id="+input;
 }
 
 

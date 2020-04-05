@@ -25,11 +25,14 @@
     </div>
 
     <div class="hideDesktop">
-        <img src="./images/search.svg" alt="search" class="icon">
+        <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
+            <input id="search" type="text" onchange="drawMobileSearch()" style="height: 4vh; margin:4px auto 4px auto;" placeholder="Search">
+            <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+        </div>
         <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
         <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
     </div>
-    </div>
+</div>
 
     <div class="wrapperContact">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.364355080716!2d-73.9834492852257!3d40.754010342982454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259003b796151%3A0xc65240166453c8cc!2s500%20Fifth%20Avenue%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2sro!4v1583431449942!5m2!1sen!2sro" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>

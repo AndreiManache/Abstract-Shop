@@ -30,7 +30,10 @@
 			</div>
 
 			<div class="hideDesktop">
-				<img src="./images/search.svg" alt="search" class="icon">
+				<div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
+					<input id="search" type="text" onchange="drawMobileSearch()" style="height: 4vh; margin:4px auto 4px auto;" placeholder="Search">
+					<img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+    			</div>
 				<a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
 				<a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
 			</div>
