@@ -482,6 +482,9 @@ ul input:focus{
     width: 45vw;
     opacity: 10;
 }
+.par{
+    max-width: 100vw;
+}
 
 
 
