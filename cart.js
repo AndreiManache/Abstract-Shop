@@ -7,23 +7,33 @@ function draw(){
         
 
         str += `
-            <a href="detalii.html?idItem=${local[i].idProdus}" id="item">
+            
                 <li id="li" class="cart-row">
                 <div class="box1">
+                    <a href="detalii.html?idItem=${local[i].idProdus}"style="text-decoration: none;color:black">
                     <img src="${local[i].image}" id="imgCart">
+                    </a>
                 </div>
-                </a>
-
+                
+                
+                
                 <div class="box1">
-                <p>${local[i].name}</p>
+                    <a href="detalii.html?idItem=${local[i].idProdus}"style="text-decoration: none;color:black">
+                    <p class="cart-p">${local[i].name}</p>
+                    </a>
                 </div>
-
+                
+                
                 <div class="box1" id="one">
                 <input type="number" onchange="updateCartTotal()" class="cart-quantity-input" value="1">
                 </div>
 
                 <div class="box1">
                     <span class="cart-price">$${local[i].price}</span>
+                </div>
+
+                <div class="box1">
+                    <span class="cart-subtotal-price"></span>
                 </div>
             
                 <div class="box1">
@@ -56,6 +66,7 @@ function updateCartTotal(){
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
     let cartRows = cartItemContainer.getElementsByClassName("cart-row")
     let total = 0;
+    let subtotal = 0;
 
     for(let i=0; i<cartRows.length ; i++){
     
@@ -82,7 +93,9 @@ function updateCartTotal(){
             }
                 
         total = total + (price*quantity);
-        
+        subtotal = price*quantity;
+        document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal}`;
+        console.log();    
     }
     
     document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total}`;
@@ -90,9 +103,6 @@ function updateCartTotal(){
     if(cartRows.length == 0){
         document.getElementsByClassName("total")[0].style.display = "none";
         document.getElementById("message2").innerText = "The cart is empty!";
-
-
-        
     }
 
     
