@@ -13,19 +13,19 @@ body,html{
     position: fixed;
     top: 0;
     height: 40px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
     background-color:rgb(20, 19, 19);
-    padding: 5px;
 }
 .img{
     height: 100%;
 }
 .img img{
-    height: 100%;
+    margin: 4px 13px;
+    height: 80%;
 }
 .backGround{
     display: flex;
@@ -175,27 +175,26 @@ h1{
     margin-bottom: 20vh;
 }
 
-ul{
+.showDesktop ul{
     display: flex;
     list-style-type:none;
     padding: 0;
     margin: 0;
 }
 
-ul li{
-
-    margin-right: 30px;
+.showDesktop ul li{
+    margin-right: 40px;
     color: rgb(221, 212, 212);
 }
 
-ul input{
+.showDesktop ul input{
     border: none;
     border-radius: 10px;
     height: 22px;
     text-align: center;
 }
 
-ul input:focus{
+.showDesktop ul input:focus{
     outline:none;
 }
 
@@ -263,16 +262,14 @@ ul input:focus{
 }
 
 #ul{
-
     display:flex;
     flex-direction: column;
-
+    padding: 70px;
 }
 
 #li{
-    
     max-height: 100px;
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -281,7 +278,6 @@ ul input:focus{
 
 #imgCart{
     max-height: 100px;
-    margin: 0;
 }
 
 #nr{
@@ -425,7 +421,7 @@ ul input:focus{
 .total button{
     background-color: transparent;
     font-weight: bold;
-    width: 90%;
+    width: fit-content;
     border: 1px solid grey;
     border-radius: 10px;
 }
@@ -472,7 +468,7 @@ ul input:focus{
     width: 8.5vw;
     border-radius: 50px;
     border: none;
-    height: 6vh;
+    height: 4vh;
     z-index: 1;
     opacity: 0;
     transition: width ease-in-out 0.2s;
@@ -489,9 +485,16 @@ ul input:focus{
     color:black;
 }
 .cart-p{
-    max-height: 100px;
+    max-height: fit-content;
 }
-
+.head{
+    max-height: 100px;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+}
 
 
 
@@ -520,15 +523,26 @@ ul input:focus{
     .showDesktop{
         display: none;
     }
-    .nav{
-        
-        position: fixed;
-        z-index: 2;
+    #ul{
+        padding: 0;
     }
+    #imgCart{
+    max-height:50px;
+    }
+    #item_name{
+        display: none;
+    }
+    .head_box2{
+        display: none;
+    }
+    
     #message{
         font-family: 'Open Sans';
         text-align: center;
         margin: 50% 10% 50% 10%;
+    }
+    #message2{
+        margin-bottom: 36vh;
     }
     .backGround{
         height: 35%;

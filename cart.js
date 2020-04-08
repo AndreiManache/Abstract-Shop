@@ -3,6 +3,27 @@ let local = JSON.parse(localStorage.getItem("cart"));
 
 function draw(){
     let str = "";
+    let head = `
+    <li class="head">
+        <div class="head_box1">
+        Item
+        </div>
+        <div class="head_box2">
+        Name
+        </div>
+        <div class="head_box3">
+        Quantity
+        </div>
+        <div class="head_box4">
+        Price
+        </div>
+        <div class="head_box5">
+        Subtotal
+        </div>
+        <div class="head_box6">
+        Edit
+        </div>
+    </li>`;
     for(let i in local){
         
 
@@ -17,7 +38,7 @@ function draw(){
                 
                 
                 
-                <div class="box1">
+                <div class="box1" id="item_name">
                     <a href="detalii.html?idItem=${local[i].idProdus}"style="text-decoration: none;color:black">
                     <p class="cart-p">${local[i].name}</p>
                     </a>
@@ -45,7 +66,7 @@ function draw(){
             }
 
 
-    document.querySelector("#ul").innerHTML = str;       
+    document.querySelector("#ul").innerHTML = head + str;       
 }
 
 function erase(event){
@@ -102,7 +123,10 @@ function updateCartTotal(){
 
     if(cartRows.length == 0){
         document.getElementsByClassName("total")[0].style.display = "none";
+        document.querySelector(".head").classList.add("hide");
         document.getElementById("message2").innerText = "The cart is empty!";
+    }else{
+        document.querySelector(".head").classList.remove("hide");
     }
 
     
