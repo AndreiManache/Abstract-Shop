@@ -14,7 +14,23 @@ async function getList(){
 
 function draw(){
     let str = "";
-    let input = window.location.search.substr(4);
+
+
+    let url = new URL(window.location.search, window.location);
+    let searchParams = url.searchParams;
+    let input = "";
+    
+        for(let [key,val] of searchParams){
+                console.log(key,val);
+                
+	            if(key==="id"){
+		        input=val;
+		        break;
+                }
+            }
+
+
+
     let found = false;
 
     for(let i in result){
@@ -74,7 +90,6 @@ function draw(){
 }
 
 function drawSearch(){
-
     let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
     return;
