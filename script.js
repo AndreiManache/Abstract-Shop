@@ -20,6 +20,7 @@ function draw(){
     for(let i in result){
 
         if(result[i].name.toLowerCase().indexOf(input) > -1 || result[i].about.toLowerCase().indexOf(input) > -1){
+
             str += `<div class="col-xs-12 col-sm-6 col-lg-4">
 
                         <div class="box">
@@ -42,7 +43,7 @@ function draw(){
                 
         }
 
-        if(result[i].name.toLowerCase().indexOf(input) !== -1) {
+        if(result[i].name.toLowerCase().indexOf(input) !== -1 || result[i].about.toLowerCase().indexOf(input) !== -1) {
             found = true;
         }
         
@@ -76,7 +77,7 @@ function drawSearch(){
 
     let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
-
+    return;
 }
 
 function drawMobileSearch(){
