@@ -11,6 +11,12 @@ async function getDb(){
 let btn = document.querySelector("#add_btn");
 btn.addEventListener('click', function(){
     document.querySelector(".bg-modal-admin").classList.remove("hide");
+    document.querySelector("#name_value").value = "";
+    document.querySelector("#image_value").value = "";
+    document.querySelector("#price_value").value = "";
+    document.querySelector("#stock_value").value = "";
+    document.querySelector("#description_value").value = "";
+
     document.querySelector("#btn2").innerText = "Save";
 
     let save = document.querySelector('#btn2');
@@ -66,7 +72,7 @@ async function modify(event){
     })
 }
 
-function saveProduct(){
+async function saveProduct(){
     
     fetch("https://baza-de-date-project.firebaseio.com/.json", {
     method : "POST",

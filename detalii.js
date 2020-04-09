@@ -69,6 +69,7 @@ function addToCart(){
              "stock": item.stock ,
              "image": item.image ,
              "name": item.name ,
+             "quantity" : item.quantity
          }
 
          for(let i in cart){
