@@ -44,21 +44,6 @@ function addToCart(){
     }else{
         cart = JSON.parse(cartStr);
     }
-
-
-    for(let i=0; i<cart.lenght ; i++){
-
-        if(cart[i].idProdus === id){
-
-            if(item.stock >= 1){
-            cart[i].quantity ++;
-            }else{
-                alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
-            }
-
-        found = true;
-        }
-    }
     
 
     if(!found){

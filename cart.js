@@ -98,7 +98,7 @@ function updateCartTotal(){
         let quantity = quantityElement.value;
 
 
-            for(let i=0 ; i< local.length ; i++){
+            for(let i=0 ; i<local.length ; i++){
 
                 if(quantity > local[i].stock){
                     alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
@@ -113,8 +113,8 @@ function updateCartTotal(){
                 return;
             }
                 
-        total = total + (price*quantity);
-        subtotal = price*quantity;
+        total = parseInt(total + (price*quantity));
+        subtotal = parseInt(price*quantity);
         document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal}`;
         console.log();    
     }
