@@ -7,7 +7,7 @@ async function getItem(){
     
     let accessDb = await fetch(`https://baza-de-date-project.firebaseio.com/${id}.json`)
     item = await accessDb.json();
-    console.log(item);
+    
     draw();
 
 }
@@ -46,7 +46,7 @@ function drawMobileSearch(){
 }
 
 function addToCart(){
-    let cartStr = localStorage.getItem("cart");
+    let cartStr = localStorage.getItem("cart"); 
     let cart;
     let found = false;
     
@@ -67,8 +67,8 @@ function addToCart(){
              "stock": item.stock ,
              "image": item.image ,
              "name": item.name ,
-             "quantity" : item.quantity
-         }
+             "quantity" : document.querySelector(".btn-ipt select").value
+         } //Creez produsul de ataugat in localStorage
 
          for(let i in cart){
 
@@ -77,24 +77,24 @@ function addToCart(){
                 alert("Produsul este deja in cos");
                 return;
             }
-        }
+        }   //Avertizare ca produsul este deja in cos
 
-         cart.push(itemForCart);
+         cart.push(itemForCart); //Se actualizeaza variabila "cart"
 
         document.querySelector(".bg-modal").classList.remove("hide");
         document.querySelector("#prodAdd img").src = `${itemForCart.image}`;
-        document.querySelector("#prodAdd p").innerText = `${itemForCart.name}`;
-              
+        document.querySelector("#prodAdd p").innerText = `${itemForCart.name}`; 
+              //[Deschide modalul] - Se afiseaza mesajul ca produsul a fost adaugat in cos
               
         let btnPa = document.querySelector("#pa"); 
              btnPa.addEventListener('click', function clicked(){
                 document.querySelector(".bg-modal").classList.add("hide");
-              })
+              })    //[Inchide modalul]
 
     }
 
  
-     localStorage.setItem("cart", JSON.stringify(cart));
+     localStorage.setItem("cart", JSON.stringify(cart)); //Se trimite variabila "cart" in localStorage
 
 
 }

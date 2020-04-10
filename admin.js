@@ -35,6 +35,7 @@ btn.addEventListener('click', function(){
 });
 
 async function modify(event){
+    
     document.querySelector(".bg-modal-admin").classList.remove("hide");
     document.querySelector("#btn2").innerText = "Modify";
     let id = event.target.dataset.id;

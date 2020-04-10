@@ -46,11 +46,11 @@ function draw(){
                 
                 
                 <div class="box1" id="one">
-                <input type="number" onchange="updateCartTotal()" class="cart-quantity-input" value="1">
+                <select style="width:39px" class="cart-quantity-input" onchange="updateCartTotal()"></select>
                 </div>
 
                 <div class="box1">
-                    <span class="cart-price">$${parseFloat(local[i].price).toFixed(2)}</span>
+                    <span class="cart-price">$${parseFloat(local[i].price).toFixed(1)}</span>
                 </div>
 
                 <div class="box1">
@@ -64,9 +64,19 @@ function draw(){
                 `
 
             }
-
-
-    document.querySelector("#ul").innerHTML = head + str;       
+            
+            document.querySelector("#ul").innerHTML = head + str;      
+            
+            for (let k=0; k<local.length ; k++){
+                
+                for(let i=1 ; i<= local[k].stock;i++){
+                    document.getElementsByClassName("cart-quantity-input")[k].innerHTML += 
+                    `<option>${i}</option>`
+                }
+                
+                
+            } //Adauga in drop-down atatea produse cate sunt in stoc
+            
 }
 
 function erase(event){
@@ -81,45 +91,31 @@ function erase(event){
 
     }  
 
-}
+}   //Sterge produsul (si din localStorage)
+
 
 function updateCartTotal(){
+
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
     let cartRows = cartItemContainer.getElementsByClassName("cart-row")
     let total = 0;
     let subtotal = 0;
 
     for(let i=0; i<cartRows.length ; i++){
-    
         let cartRow = cartRows[i];
         let priceElement = cartRow.getElementsByClassName("cart-price")[0]
         let quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0]
         let price = parseFloat(priceElement.innerText.replace("$",''));
         let quantity = quantityElement.value;
-
-
-            for(let i=0 ; i<local.length ; i++){
-
-                if(quantity > local[i].stock){
-                    alert(`Ai atins maximul stocului disponibil! Numar de produse disponibile:${local[i].stock}`);
-                    quantityElement.value = local[i].stock;
-                    updateCartTotal();
-                    return;
-                }
-            }
-
-            if(quantity < 1){
-                quantityElement.value = 1;
-                return;
-            }
-                
+        
         total = parseInt(total + (price*quantity));
         subtotal = price*quantity;
-        document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal.toFixed(2)}`;
-        console.log();    
-    }
+
+        document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal.toFixed(1)}`;
+     
+    } //Stabileste valorile totalului si subtotalului(si il deseneaza)
     
-    document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total.toFixed(2)}`;
+    document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total.toFixed(1)}`; //Deseneaza total
 
     if(cartRows.length == 0){
         document.getElementsByClassName("total")[0].style.display = "none";
@@ -127,8 +123,8 @@ function updateCartTotal(){
         document.getElementById("message2").innerText = "The cart is empty!";
     }else{
         document.querySelector(".head").classList.remove("hide");
-    }
+    } // Afiseaza mesajul ca nu este nimic in cos (daca este cazul)
 
     
-}
+} //Actualizeaza pretul total si subtotal
 
