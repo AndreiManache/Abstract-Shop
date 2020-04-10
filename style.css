@@ -37,6 +37,13 @@ body,html{
     margin-top: 40px;
     position: relative;
 }
+.bg-img{
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4fa54974465049.5c30c65b8da15.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .title{
     margin:0 auto;
     font-size: 14vw;
@@ -80,9 +87,19 @@ body,html{
     align-items: center;
     margin-top: 5%;
 }
-.wrapperCart, .wrapperContact{
+.wrapperCart{
     margin-bottom: 250px;
-    margin-top: 6vh;
+}
+.wrapperContact{
+    margin-bottom: 250px;
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 50%;
+    margin: 0 auto;
+}
+iframe{
+    height: 20em;
+    width: 100%;
 }
 .box{
     margin-bottom: 40px;
@@ -253,7 +270,7 @@ h1{
  font-size: 15px;
  font-weight: bold;
  font-family: 'Sen', sans-serif;
- width: 40%;
+ width: fit-content;
  height: 30px;
 }
 
@@ -320,7 +337,6 @@ h1{
     right: 0;
     left: 0;
     z-index: 1;
-    display: none;
 }
 .bg-modal-admin{
     background-color: rgb(0,0,0);
@@ -382,6 +398,8 @@ h1{
     border: none;
     background-color: rgb(30, 30, 185);
     color: whitesmoke;
+    height: 30px;
+    width: 70px;
 }
 #prodAdd img{
     max-width: 20%;
@@ -479,7 +497,10 @@ h1{
     opacity: 10;
 }
 .par{
-    max-width: 100vw;
+    width: 100%;
+    color: white;
+    font-size: larger;
+    text-align: center;
 }
 .cart-row{
     color:black;
@@ -519,6 +540,10 @@ h1{
         align-items: center;
         justify-content: center;
         margin-right: 5px;
+    }
+    .wrapperContact{
+        max-width: 90%;
+        margin-top: 34%;
     }
     #pop{
         width: 90%;

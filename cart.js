@@ -50,7 +50,7 @@ function draw(){
                 </div>
 
                 <div class="box1">
-                    <span class="cart-price">$${local[i].price}</span>
+                    <span class="cart-price">$${parseFloat(local[i].price).toFixed(2)}</span>
                 </div>
 
                 <div class="box1">
@@ -114,12 +114,12 @@ function updateCartTotal(){
             }
                 
         total = parseInt(total + (price*quantity));
-        subtotal = parseInt(price*quantity);
-        document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal}`;
+        subtotal = price*quantity;
+        document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal.toFixed(2)}`;
         console.log();    
     }
     
-    document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total}`;
+    document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total.toFixed(2)}`;
 
     if(cartRows.length == 0){
         document.getElementsByClassName("total")[0].style.display = "none";

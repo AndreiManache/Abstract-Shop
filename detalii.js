@@ -1,24 +1,35 @@
 let item;
 let id = window.location.search.substr(8);
 
+
 async function getItem(){
 
     
     let accessDb = await fetch(`https://baza-de-date-project.firebaseio.com/${id}.json`)
     item = await accessDb.json();
-
+    console.log(item);
     draw();
 
 }
 
 function draw(){
     document.querySelector("#poza").src = item.image;
-    document.querySelector("#detalii").innerHTML = `<span id="numeDetalii">${item.name}</span>`+`<p>${item.about}</p>`;
+
+    document.querySelector("#detalii").innerHTML =
+    `<span id="numeDetalii">${item.name}</span>`+`<p>${item.about}</p>`;
+
+    
     document.querySelector(".btn-ipt").innerHTML = 
     `<p style="font-size:200%">$${item.price}</p>
     <button id="addToCart" onclick="addToCart()" style="margin: 15px;">ADD TO CART</button>
-    <input type="number" value="1" style="width: 8%; height: 30%;" class="ipt">`;
-    
+    <select></select>
+    `
+
+    for(let i=1; i<=item.stock ; i++){
+    document.querySelector(".btn-ipt select").innerHTML += 
+    `<option>${i}</option>`
+    }
+
 }
 
 function drawSearch(){
@@ -31,6 +42,7 @@ function drawSearch(){
 function drawMobileSearch(){
     let input = document.querySelector("#search").value;
     window.location = "index.html?id="+input;
+    return;
 }
 
 function addToCart(){
@@ -47,7 +59,7 @@ function addToCart(){
     
 
     if(!found){
-
+        
         let itemForCart = {
  
              "idProdus": id,
@@ -60,27 +72,26 @@ function addToCart(){
 
          for(let i in cart){
 
-                    if(cart[i].idProdus === itemForCart.idProdus){
+            if(cart[i].idProdus === itemForCart.idProdus){
 
-                        alert("Produsul este deja in cos");
-                        return;
-                    }
-                }
+                alert("Produsul este deja in cos");
+                return;
+            }
+        }
 
-             cart.push(itemForCart);
+         cart.push(itemForCart);
 
-              document.querySelector(".bg-modal").style.display = "block";
-              document.querySelector("#prodAdd img").src = `${itemForCart.image}`;
-              document.querySelector("#prodAdd p").innerText = `${itemForCart.name}`;
+        document.querySelector(".bg-modal").classList.remove("hide");
+        document.querySelector("#prodAdd img").src = `${itemForCart.image}`;
+        document.querySelector("#prodAdd p").innerText = `${itemForCart.name}`;
               
               
-             let btnPa = document.querySelector("#pa"); 
+        let btnPa = document.querySelector("#pa"); 
              btnPa.addEventListener('click', function clicked(){
-                document.querySelector(".bg-modal").style.display = "none";
+                document.querySelector(".bg-modal").classList.add("hide");
               })
 
-              
-            }
+    }
 
  
      localStorage.setItem("cart", JSON.stringify(cart));
