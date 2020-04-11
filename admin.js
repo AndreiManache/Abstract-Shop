@@ -19,15 +19,8 @@ btn.addEventListener('click', function(){
     document.querySelector("#stock_value").value = "";
     document.querySelector("#description_value").value = "";//Golesc input-urile
 
-    let save = document.querySelector('#btn2');
+    
     let cancel = document.querySelector('#btn3');
-
-    save.addEventListener('click', function(){
-        saveProduct();
-        document.querySelector(".bg-modal-admin").classList.add("hide");
-        document.querySelector("#btn2").classList.add("hide");
-        
-    })
 
     cancel.addEventListener('click', function(){
         document.querySelector(".bg-modal-admin").classList.add("hide");
@@ -35,6 +28,17 @@ btn.addEventListener('click', function(){
     })
 
 });
+
+let save = document.querySelector('#btn2');
+save.addEventListener('click',function(){
+    const promise = saveProduct();
+    promise.then(function(){
+        document.querySelector(".bg-modal-admin").classList.add("hide");
+        document.querySelector("#btn2").classList.add("hide");
+        getDb();
+    })
+})
+
 
 async function modify(event){
     
@@ -80,7 +84,7 @@ async function modify(event){
 
 async function saveProduct(){
     
-    fetch("https://baza-de-date-project.firebaseio.com/.json", {
+   return fetch("https://baza-de-date-project.firebaseio.com/.json", {
     method : "POST",
     
     body :JSON.stringify({
