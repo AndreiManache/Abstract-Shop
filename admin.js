@@ -11,13 +11,13 @@ async function getDb(){
 let btn = document.querySelector("#add_btn");
 btn.addEventListener('click', function(){
     document.querySelector(".bg-modal-admin").classList.remove("hide");
+    document.querySelector("#btn2").classList.remove("hide"); //Apare modalul si butonul de save
+
     document.querySelector("#name_value").value = "";
     document.querySelector("#image_value").value = "";
     document.querySelector("#price_value").value = "";
     document.querySelector("#stock_value").value = "";
-    document.querySelector("#description_value").value = "";
-
-    document.querySelector("#btn2").innerText = "Save";
+    document.querySelector("#description_value").value = "";//Golesc input-urile
 
     let save = document.querySelector('#btn2');
     let cancel = document.querySelector('#btn3');
@@ -25,11 +25,13 @@ btn.addEventListener('click', function(){
     save.addEventListener('click', function(){
         saveProduct();
         document.querySelector(".bg-modal-admin").classList.add("hide");
-        getDb();
+        document.querySelector("#btn2").classList.add("hide");
+        
     })
 
     cancel.addEventListener('click', function(){
         document.querySelector(".bg-modal-admin").classList.add("hide");
+        document.querySelector("#btn2").classList.add("hide");
     })
 
 });
@@ -37,7 +39,8 @@ btn.addEventListener('click', function(){
 async function modify(event){
     
     document.querySelector(".bg-modal-admin").classList.remove("hide");
-    document.querySelector("#btn2").innerText = "Modify";
+    document.querySelector("#btn4").classList.remove("hide"); //Apar modulul si butonul modify
+
     let id = event.target.dataset.id;
     let response = await fetch ("https://baza-de-date-project.firebaseio.com/.json");
      result = await response.json();
@@ -49,9 +52,10 @@ async function modify(event){
      document.querySelector("#description_value").value = result[id].about;
 
     let cancel = document.querySelector('#btn3');
-    let modify = document.querySelector("#btn2");
+    let modify = document.querySelector("#btn4");
     cancel.addEventListener('click', function(){
         document.querySelector(".bg-modal-admin").classList.add("hide");
+        document.querySelector("#btn4").classList.add("hide");
     })
     modify.addEventListener('click',async function(){
         let modifiedItem = {
@@ -69,6 +73,7 @@ async function modify(event){
           )
 
           document.querySelector(".bg-modal-admin").classList.add("hide");
+          document.querySelector("#btn4").classList.add("hide");
           getDb();
     })
 }
@@ -87,7 +92,7 @@ async function saveProduct(){
     })
 })
 .then(res =>{return res.json()} )
-.then(data => console.log(data))
+.then(data => data)
 
 }
 
