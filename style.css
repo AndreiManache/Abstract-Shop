@@ -190,6 +190,8 @@ h1{
 #message2{
     width: 100%;
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 286px;
 }
 
 .showDesktop ul{
