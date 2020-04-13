@@ -85,7 +85,7 @@ body,html{
     display:flex;
     flex-wrap:wrap;
     align-items: center;
-    margin-top: 5%;
+    margin: 70px 0;
 }
 .wrapperCart{
     min-height: calc(100vh - 225px);
@@ -520,6 +520,9 @@ h1{
     justify-content: space-between;
     margin: 10px auto;
 }
+.height{
+    min-height: calc(100vh - 225px);
+}
 
 
 
@@ -569,9 +572,7 @@ h1{
     }
     
     #message{
-        font-family: 'Open Sans';
-        text-align: center;
-        margin: 50% 10% 50% 10%;
+        margin: 15% 10%;
     }
     .backGround{
         height: 35%;
@@ -585,13 +586,16 @@ h1{
         margin-bottom: -20%;
     }
     #poza{
-        margin:10% 10%;
+        margin: 3% 10%;
     }
     #detalii{
         max-width: 80%;
     }
     .btn-ipt{
         justify-content: center;
+    }
+    .margin{
+        margin-top: calc(100% - 225px);
     }
 }
 

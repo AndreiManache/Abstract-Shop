@@ -4,6 +4,7 @@ async function getList(){
     let response = await fetch("https://baza-de-date-project.firebaseio.com/.json");
     result = await response.json();
 
+    document.querySelector("footer").classList.remove("margin");
     document.querySelector("#loader").style.display = "none";
     document.querySelector(".wrapper").classList.remove("hide");
 
@@ -74,12 +75,15 @@ function draw(){
         document.querySelector("#h1").classList.add('hide');
         document.querySelector("#message").classList.remove('hide');
         document.querySelector("#message").innerHTML = `Ooops! There were no results for "${input}"... `;
+        document.querySelector("#message").classList.add("height");
         document.querySelector(".showDesktop input").value = "";
         
     }else{
         document.querySelector(".backGround").classList.add('hide');
         document.querySelector(".carousel").classList.add('hide');
         document.querySelector("#h1").classList.add('hide');
+        document.querySelector("#message").classList.remove("height");
+        document.querySelector("footer").classList.add("margin");
         document.querySelector("#message").classList.remove('hide');
         document.querySelector("#message").innerHTML = `Search results for "${input}"... `;
         document.querySelector(".showDesktop input").value = "";
