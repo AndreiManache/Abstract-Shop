@@ -46,7 +46,7 @@ function draw(){
                 
                 
                 <div class="box1" id="one">
-                <select style="width:39px" class="cart-quantity-input" onchange="updateCartTotal()"></select>
+                    <select style="width:39px" class="cart-quantity-input" onchange="updateCartTotal()"></select>
                 </div>
 
                 <div class="box1">
@@ -66,12 +66,13 @@ function draw(){
             }
             
             document.querySelector("#ul").innerHTML = head + str;      
-            
+            const allSelects =  document.getElementsByClassName("cart-quantity-input")
             for (let k=0; k<local.length ; k++){
                 
                 for(let i=1 ; i<= local[k].stock;i++){
-                    document.getElementsByClassName("cart-quantity-input")[k].innerHTML += 
-                    `<option>${i}</option>`
+                    const productQuantity = local[k].quantity;
+                    const isSelected = productQuantity === i;
+                  allSelects[k].innerHTML += `<option ${isSelected ? 'selected' : ''}>${i}</option>`
                 }
                 
                 
