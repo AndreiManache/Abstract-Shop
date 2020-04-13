@@ -65,18 +65,19 @@ function draw(){
 
             }
             
-            document.querySelector("#ul").innerHTML = head + str;      
-            const allSelects =  document.getElementsByClassName("cart-quantity-input")
+            document.querySelector("#ul").innerHTML = head + str;  
+
+            const allSelects =  document.getElementsByClassName("cart-quantity-input");
+
             for (let k=0; k<local.length ; k++){
-                
+
                 for(let i=1 ; i<= local[k].stock;i++){
                     const productQuantity = local[k].quantity;
                     const isSelected = productQuantity === i;
                   allSelects[k].innerHTML += `<option ${isSelected ? 'selected' : ''}>${i}</option>`
                 }
                 
-                
-            } //Adauga in drop-down atatea produse cate sunt in stoc
+             } //Adauga in drop-down atatea produse cate sunt in stoc
             
 }
 

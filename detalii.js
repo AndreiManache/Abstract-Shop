@@ -67,7 +67,7 @@ function addToCart(){
              "stock": item.stock ,
              "image": item.image ,
              "name": item.name ,
-             "quantity" : document.querySelector(".btn-ipt select").value
+             "quantity" : parseInt(document.querySelector(".btn-ipt select").value)
          } //Creez produsul de ataugat in localStorage
 
          for(let i in cart){
