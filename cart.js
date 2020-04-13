@@ -3,26 +3,14 @@ let local = JSON.parse(localStorage.getItem("cart"));
 
 function draw(){
     let str = "";
-    let head = `
-    <li class="head">
-        <div class="head_box1">
-        Item
-        </div>
-        <div class="head_box2">
-        Name
-        </div>
-        <div class="head_box3">
-        Quantity
-        </div>
-        <div class="head_box4">
-        Price
-        </div>
-        <div class="head_box5">
-        Subtotal
-        </div>
-        <div class="head_box6">
-        Edit
-        </div>
+    let head = 
+    `<li class="head">
+        <div class="head_box1">Item</div>
+        <div class="head_box2">Name</div>
+        <div class="head_box3">Quantity</div>
+        <div class="head_box4">Price</div>
+        <div class="head_box5">Subtotal</div>
+        <div class="head_box6">Edit</div>
     </li>`;
     for(let i in local){
         
@@ -68,8 +56,7 @@ function draw(){
             document.querySelector("#ul").innerHTML = head + str;  
 
             const allSelects =  document.getElementsByClassName("cart-quantity-input");
-
-            for (let k=0; k<local.length ; k++){
+             for (let k=0; k<local.length ; k++){//Adauga in drop-down atatea produse cate sunt in stoc
 
                 for(let i=1 ; i<= local[k].stock;i++){
                     const productQuantity = local[k].quantity;
@@ -77,11 +64,11 @@ function draw(){
                   allSelects[k].innerHTML += `<option ${isSelected ? 'selected' : ''}>${i}</option>`
                 }
                 
-             } //Adauga in drop-down atatea produse cate sunt in stoc
+             }
             
 }
 
-function erase(event){
+function erase(event){//Sterge produsul (si din localStorage)
 
     event.target.parentNode.parentNode.remove();
     for(let i=0 ; i< local.length ; i++){
@@ -93,17 +80,25 @@ function erase(event){
 
     }  
 
-}   //Sterge produsul (si din localStorage)
+}
 
-
-function updateCartTotal(){
+function updateCartTotal(){//Actualizeaza pretul total si subtotal
 
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
     let cartRows = cartItemContainer.getElementsByClassName("cart-row")
     let total = 0;
     let subtotal = 0;
 
-    for(let i=0; i<cartRows.length ; i++){
+    const allSelects =  document.getElementsByClassName("cart-quantity-input");
+    for (let k=0; k<local.length ; k++){
+
+            local[k].quantity = parseInt(allSelects[k].value);
+            localStorage.setItem("cart",JSON.stringify(local));
+            
+     }
+
+    for(let i=0; i<cartRows.length ; i++){ //Stabileste valorile totalului si subtotalului(si il deseneaza)
+        
         let cartRow = cartRows[i];
         let priceElement = cartRow.getElementsByClassName("cart-price")[0]
         let quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0]
@@ -114,19 +109,20 @@ function updateCartTotal(){
         subtotal = price*quantity;
 
         document.querySelectorAll(".cart-subtotal-price")[i].innerText = `$${subtotal.toFixed(1)}`;
-     
-    } //Stabileste valorile totalului si subtotalului(si il deseneaza)
+    } 
     
     document.getElementsByClassName("cart-total-price")[0].innerText =`Total $${total.toFixed(1)}`; //Deseneaza total
 
-    if(cartRows.length == 0){
+    if(cartRows.length == 0){// Afiseaza mesajul ca nu este nimic in cos (daca este cazul)
+
         document.getElementsByClassName("total")[0].style.display = "none";
         document.querySelector(".head").classList.add("hide");
         document.getElementById("message2").innerText = "The cart is empty!";
-    }else{
-        document.querySelector(".head").classList.remove("hide");
-    } // Afiseaza mesajul ca nu este nimic in cos (daca este cazul)
 
-    
-} //Actualizeaza pretul total si subtotal
+    }else{
+
+        document.querySelector(".head").classList.remove("hide");
+
+    } 
+} 
 
