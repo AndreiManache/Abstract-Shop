@@ -2,73 +2,93 @@
 let local = JSON.parse(localStorage.getItem("cart"));
 
 function draw(){
-    let str = "";
-    let head = 
-    `<li class="head">
-        <div class="head_box1">Item</div>
-        <div class="head_box2">Name</div>
-        <div class="head_box3">Quantity</div>
-        <div class="head_box4">Price</div>
-        <div class="head_box5">Subtotal</div>
-        <div class="head_box6">Edit</div>
-    </li>`;
-    for(let i in local){
-        
 
+    let str = "";
+
+    let head = 
+       //Asta este capul de lista de la cart
+    `  
+        <li class="head">
+            <div class="head_box1">Item</div>
+            <div class="head_box2">Name</div>
+            <div class="head_box3">Quantity</div>
+            <div class="head_box4">Price</div>
+            <div class="head_box5">Subtotal</div>
+            <div class="head_box6">Edit</div>
+        </li>
+    `;
+
+    for(let i in local){ //Fiecare row al listei din cart
+        
         str += `
             
-                <li id="li" class="cart-row">
+            <li id="li" class="cart-row">
+
                 <div class="box1">
+
                     <a href="detalii.html?idItem=${local[i].idProdus}"style="text-decoration: none;color:black">
-                    <img src="${local[i].image}" id="imgCart">
+                        <img src="${local[i].image}" id="imgCart">
                     </a>
+
                 </div>
-                
-                
-                
+            
                 <div class="box1" id="item_name">
+
                     <a href="detalii.html?idItem=${local[i].idProdus}"style="text-decoration: none;color:black">
-                    <p class="cart-p">${local[i].name}</p>
+                        <p class="cart-p">${local[i].name}</p>
                     </a>
+
                 </div>
-                
-                
+            
+            
                 <div class="box1" id="one">
+
                     <select style="width:39px" class="cart-quantity-input" onchange="updateCartTotal()"></select>
+
                 </div>
 
                 <div class="box1">
+
                     <span class="cart-price">$${parseFloat(local[i].price).toFixed(1)}</span>
+
                 </div>
 
                 <div class="box1">
+
                     <span class="cart-subtotal-price"></span>
+
                 </div>
-            
+        
                 <div class="box1">
+
                     <button id="btn-del" onclick="erase(event) ; updateCartTotal()">Delete</button>
+
                 </div>
-                </li>
-                `
 
-            }
+            </li>
+        `
+
+    }
             
-            document.querySelector("#ul").innerHTML = head + str;  
+    document.querySelector("#ul").innerHTML = head + str;  //Deseneaza cart-ul
 
-            const allSelects =  document.getElementsByClassName("cart-quantity-input");
-             for (let k=0; k<local.length ; k++){//Adauga in drop-down atatea produse cate sunt in stoc
+    const allSelects =  document.getElementsByClassName("cart-quantity-input");
 
-                for(let i=1 ; i<= local[k].stock;i++){
-                    const productQuantity = local[k].quantity;
-                    const isSelected = productQuantity === i;
-                  allSelects[k].innerHTML += `<option ${isSelected ? 'selected' : ''}>${i}</option>`
-                }
-                
-             }
+    for (let k=0; k<local.length ; k++){//Adauga in drop-down atatea produse cate sunt in stoc
+
+        for(let i=1 ; i<= local[k].stock;i++){
+
+            const productQuantity = local[k].quantity;
+            const isSelected = productQuantity === i;
+            allSelects[k].innerHTML += `<option ${isSelected ? 'selected' : ''}>${i}</option>`
+
+        }
+        
+    }
             
 }
 
-function erase(event){//Sterge produsul (si din localStorage)
+function erase(event){ //Sterge produsul (si din localStorage)
 
     event.target.parentNode.parentNode.remove();
     for(let i=0 ; i< local.length ; i++){
@@ -82,7 +102,7 @@ function erase(event){//Sterge produsul (si din localStorage)
 
 }
 
-function updateCartTotal(){//Actualizeaza pretul total si subtotal
+function updateCartTotal(){ //Actualizeaza pretul total si subtotal
 
     let cartItemContainer = document.getElementsByClassName("cart-items")[0]
     let cartRows = cartItemContainer.getElementsByClassName("cart-row")
@@ -90,12 +110,13 @@ function updateCartTotal(){//Actualizeaza pretul total si subtotal
     let subtotal = 0;
 
     const allSelects =  document.getElementsByClassName("cart-quantity-input");
+    
     for (let k=0; k<local.length ; k++){
 
-            local[k].quantity = parseInt(allSelects[k].value);
-            localStorage.setItem("cart",JSON.stringify(local));
+        local[k].quantity = parseInt(allSelects[k].value);
+        localStorage.setItem("cart",JSON.stringify(local));
             
-     }
+    }
 
     for(let i=0; i<cartRows.length ; i++){ //Stabileste valorile totalului si subtotalului(si il deseneaza)
         

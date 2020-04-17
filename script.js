@@ -1,6 +1,7 @@
 let result;
 
 async function getList(){
+
     let response = await fetch("https://baza-de-date-project.firebaseio.com/.json");
     result = await response.json();
 
@@ -12,25 +13,24 @@ async function getList(){
     
 }
 
-
 function draw(){
-    let str = "";
 
+    let str = "";
 
     let url = new URL(window.location.search, window.location);
     let searchParams = url.searchParams;
     let input = "";
     
-        for(let [key,val] of searchParams){
-                console.log(key,val);
-                
-	            if(key==="id"){
-		        input=val;
-		        break;
-                }
-            }
+    for(let [key,val] of searchParams){
+        
+        if(key==="id"){
 
+            input=val;
+            break;
 
+        }
+
+    }
 
     let found = false;
 
@@ -38,25 +38,27 @@ function draw(){
 
         if(result[i].name.toLowerCase().indexOf(input) > -1 || result[i].about.toLowerCase().indexOf(input) > -1){
 
-            str += `<div class="col-xs-12 col-sm-6 col-lg-4">
+            str += `
+                <div class="col-xs-12 col-sm-6 col-lg-4">
 
-                        <div class="box">
+                    <div class="box">
 
-                            <a href="detalii.html?idItem=${[i]}" id="item">
+                        <a href="detalii.html?idItem=${[i]}" id="item">
 
-                                    <img src="${result[i].image}" alt="imagine" class="main_img">
-                                    
+                            <img src="${result[i].image}" alt="imagine" class="main_img">
 
-                                    <div class="access">
+                            <div class="access">
 
-                                        <div id="name">${result[i].name}</div>
-                                        <div>${result[i].price}$</div>
-                                
-                                    </div>
-                            </a>
+                                <div id="name">${result[i].name}</div>
+                                <div>${result[i].price}$</div>
+                        
+                            </div>
 
-                        </div>
-                    </div>`;
+                        </a>
+
+                    </div>
+                </div>
+            `;
                 
         }
 
@@ -79,6 +81,7 @@ function draw(){
         document.querySelector(".showDesktop input").value = "";
         
     }else{
+
         document.querySelector(".backGround").classList.add('hide');
         document.querySelector(".carousel").classList.add('hide');
         document.querySelector("#h1").classList.add('hide');
@@ -87,6 +90,7 @@ function draw(){
         document.querySelector("#message").classList.remove('hide');
         document.querySelector("#message").innerHTML = `Search results for "${input}"... `;
         document.querySelector(".showDesktop input").value = "";
+
     }
 
     document.querySelector(".wrapper").innerHTML = str;
@@ -94,14 +98,18 @@ function draw(){
 }
 
 function drawSearch(){
+
     let input = document.querySelector(".showDesktop input").value;
     window.location = "index.html?id="+input;
     return;
+
 }
 
 function drawMobileSearch(){
+
     let input = document.querySelector("#search").value;
     window.location = "index.html?id="+input;
+    
 }
 
 

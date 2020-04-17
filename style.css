@@ -526,19 +526,6 @@ h1{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 767px){
     .hideDesktop{
         display: flex;
@@ -607,7 +594,6 @@ h1{
 }
 
 }
-
 
 
 .lds-ripple {

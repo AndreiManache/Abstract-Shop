@@ -14,41 +14,52 @@
     
     
 
-    <div class="showDesktop">
-        <ul>
-            <a href="./contact.html" class="link"><li>Contact</li></a>
-            <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
-            <a href="./admin.html" class="link"><li>Admin</li></a>
-            <li>
-                <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
-            </li>
-        </ul>
-    </div>
+        <div class="showDesktop">
+            <ul>
+                <a href="./contact.html" class="link"><li>Contact</li></a>
+                <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
+                <a href="./admin.html" class="link"><li>Admin</li></a>
 
-    <div class="hideDesktop">
-        <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
-            <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
-            <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+                <li>
+                    <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+                </li>
+
+            </ul>
         </div>
-        <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
-        <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+
+        <div class="hideDesktop">
+
+            <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
+                <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
+                <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+            </div>
+
+            <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
+            <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+        </div>
+
     </div>
-</div>
 
     <div class="wrapperCart">
+
         <h2 id="message2"></h2>
-        <ul id="ul" class="cart-items">
-            
-        </ul>
+        <ul id="ul" class="cart-items"></ul>
+
         <div class="total">
+
             <span class="cart-total-price">Total $100</span>
             <button style="margin: 15px;">Continue</button>
+
         </div>
+
         <div class="push"></div>
+
     </div>
 
     <footer>
+
         <div class="fWrap">
+
             <div>
                 <a href="#" class="a">Terms of Service</a>
                 <a href="#" class="a">Privacy Policy</a>
@@ -69,7 +80,9 @@
                 <img src="./images/paypal.svg" alt="pp" class="icon">
                 <img src="./images/visa.svg" alt="vs" class="icon">
             </div>
+
         </div>
+
     </footer>
 
     <script src="./detalii.js"></script>

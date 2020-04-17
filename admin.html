@@ -9,8 +9,7 @@
 </head>
 <body onload="getDb()">  
 
-    <div class="bg-modal-admin hide" >
-        
+    <div class="bg-modal-admin hide" >      
         <div id="pop_admin">
 
             <div class="wpr_admin">
@@ -21,58 +20,69 @@
             </div>
 
             <div id="prodAdd_admin">
+
                 <div>
                     <p>Name</p>
                     <input type="text" id="name_value">
                 </div>
+
                 <div>
                     <p>Image</p>
                     <input type="text" id="image_value">
                 </div>
+
                 <div>
                     <p>Price</p>
                     <input type="text" id="price_value">
                 </div>
+
                 <div>
                     <p>Stock</p>
                     <input type="text" id="stock_value">
                 </div>
+
                 <div>
                     <p>Description</p>
                     <textarea cols="30" rows="10" style="width: 70%;" id="description_value"></textarea>
                 </div>
             </div>
-            
-        </div>
 
+        </div>
     </div>
 
     <div class="nav">
 			
         <a href="./index.html" class="img"><img src="./images/Logo.png" alt="logo"></a>
     
-    
+        <div class="showDesktop">
+            <ul>
 
-    <div class="showDesktop">
-        <ul>
-            <a href="./contact.html" class="link"><li>Contact</li></a>
-            <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
-            <a href="./admin.html" class="link"><li>Admin</li></a>
-            <li>
-                <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
-            </li>
-        </ul>
-    </div>
+                <a href="./contact.html" class="link"><li>Contact</li></a>
+                <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
+                <a href="./admin.html" class="link"><li>Admin</li></a>
 
-    <div class="hideDesktop">
-        <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
-            <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
-            <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+                <li>
+                    <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+                </li>
+
+            </ul>
         </div>
-        <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
-        <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+
+        <div class="hideDesktop">
+
+            <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
+
+                <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
+                <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+            
+            </div>
+
+            <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
+            <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+        
+        </div>
+
     </div>
-</div>
 
     <div class="gestionare">
         <h2 style="margin: 30px;">Products management</h2>
@@ -80,7 +90,9 @@
     </div>
     
     <div class="adminWrapper">
+
         <table id="table">
+
             <thead style="background-color: rgba(253, 49, 49, 0.87);">
                 <tr>
                     <td>Image</td>
@@ -91,8 +103,11 @@
                     <td></td>
                 </tr>
             </thead>
+            
             <tbody class="item_list"></tbody>
+
         </table>
+
     </div>
 
     <footer>

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detallii</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./resposive/grid.css">
+
 </head>
+
 <body onload="getItem()">
 
     <div class="bg-modal hide" >
@@ -14,14 +17,18 @@
         <div id="pop">
 
             <div class="wpr" style="display: flex; justify-content: space-between; align-items: center;">
+               
                 <p style="margin-left: 15px;">Your product has been added to cart</p>
                 <button style="height: 25px; margin-right: 15px;" id="pa">X</button>
+
             </div>
 
             <div id="prodAdd">
-            <img src="" alt="ops">
-            <p></p>
-            <a href="./cart.html"><button style="margin-right: 15px;" id="vzCos">See Cart</button></a>
+
+                <img src="" alt="ops">
+                <p></p>
+                <a href="./cart.html"><button style="margin-right: 15px;" id="vzCos">See Cart</button></a>
+            
             </div>
             
         </div>
@@ -32,37 +39,49 @@
 			
         <a href="./index.html" class="img"><img src="./images/Logo.png" alt="logo"></a>
     
-    
+        <div class="showDesktop">
 
-    <div class="showDesktop">
-        <ul>
-            <a href="./contact.html" class="link"><li>Contact</li></a>
-            <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
-            <a href="./admin.html" class="link"><li>Admin</li></a>
-            <li>
-                <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
-            </li>
-        </ul>
-    </div>
+            <ul>
+                <a href="./contact.html" class="link"><li>Contact</li></a>
+                <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
+                <a href="./admin.html" class="link"><li>Admin</li></a>
 
-    <div class="hideDesktop">
-        <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
-            <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
-            <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+                <li>
+                    <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+                </li>
+
+            </ul>
+
         </div>
-        <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
-        <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+
+        <div class="hideDesktop">
+
+            <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
+                <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
+                <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+            </div>
+
+            <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
+            <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+        
+        </div>
+
     </div>
-</div>
+
     <div class="wr-det">
         
         <div class="col-xs-12 col-sm-12 col-lg-6">
+
             <div class="wr-img">
+
                 <img src="" alt="Img Item" id="poza">
+
             </div>
             
         </div>
+
         <div class="col-xs-12 col-sm-12 col-lg-6">
+
             <div class="detalii">    
             
                 <div id="detalii"></div>
@@ -70,34 +89,48 @@
                 <p>In Stock <img src="./images/check.svg" alt="check" class="icon"></p>
 
             </div>
+
         </div>
 
     </div>
 
     <footer>
+
         <div class="fWrap">
+
             <div>
+
                 <a href="#" class="a">Terms of Service</a>
                 <a href="#" class="a">Privacy Policy</a>
                 <a href="#" class="a">Refund Policy</a>
+
             </div>
 
             <div>
+
                 <img src="./images/facebook.svg" alt="fb" class="icon">
                 <img src="./images/instagram.svg" alt="insta" class="icon">
+
             </div>
 
             <div>
+
                 <p><img src="./images/copyright.svg" alt="cr" class="sm-icon"> 2020, Andrei Manache Romania</p>
+
             </div>
 
             <div>
+
                 <img src="./images/mastercard.svg" alt="mc" class="icon">
                 <img src="./images/paypal.svg" alt="pp" class="icon">
                 <img src="./images/visa.svg" alt="vs" class="icon">
+                
             </div>
+
         </div>
+
     </footer>
+    
     <script src="./detalii.js"></script>
 </body>
 </html>

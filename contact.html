@@ -7,65 +7,89 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./resposive/grid.css">
 </head>
-<body class="bg-img">  
+
+<body class="bg-img">
+
     <div class="nav">
 			
         <a href="./index.html" class="img"><img src="./images/Logo.png" alt="logo"></a>
     
-    
+        <div class="showDesktop">
+            <ul>
+                <a href="./contact.html" class="link"><li>Contact</li></a>
+                <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
+                <a href="./admin.html" class="link"><li>Admin</li></a>
 
-    <div class="showDesktop">
-        <ul>
-            <a href="./contact.html" class="link"><li>Contact</li></a>
-            <a href="./cart.html" class="link"><li>Shopping Cart</li></a>
-            <a href="./admin.html" class="link"><li>Admin</li></a>
-            <li>
-                <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
-            </li>
-        </ul>
-    </div>
+                <li>
+                    <input type="text" placeholder="Search" onchange="drawSearch()" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'">
+                </li>
 
-    <div class="hideDesktop">
-        <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
-            <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
-            <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+            </ul>
         </div>
-        <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
-        <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+
+        <div class="hideDesktop">
+
+            <div style="position: relative; width: fit-content; display: flex; align-items: center;" class="search_div">
+
+                <input id="search" type="text" onchange="drawMobileSearch()" style="margin:4px auto 4px auto;" placeholder="Search">
+                <img src="./images/search.svg" alt="search" class="icon" style="position: absolute; right: 0; margin: auto 1px auto 0;"> 
+            
+            </div>
+
+            <a href="./contact.html" class="link"><img src="./images/contact.svg" alt="contact" class="icon"></a>
+            <a href="./cart.html" class="link"><img src="./images/bag.svg" alt="cart" class="icon"></a>
+
+        </div>
+
     </div>
-</div>
 
     <h1>About us!</h1>
+    
     <div class="wrapperContact">
         
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20360.947117965603!2d-73.96258090567974!3d40.65914034946083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sro!4v1586474797817!5m2!1sen!2sro" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        
         <p class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam, necessitatibus amet aut, molestiae assumenda quibusdam 
-            recusandae libero rerum, temp aut <i style="color:rgb(227, 66, 52);">We are pretty abstract</i> asperiores accusamus ullam placeat! Quae, possimus?</p>
+            recusandae libero rerum, temp aut <i style="color:rgb(227, 66, 52);">We are pretty abstract</i> asperiores accusamus ullam placeat! Quae, possimus?
+        </p>
+
     </div>
         
     <footer>
+
         <div class="fWrap">
+
             <div>
+
                 <a href="#" class="a">Terms of Service</a>
                 <a href="#" class="a">Privacy Policy</a>
                 <a href="#" class="a">Refund Policy</a>
+
             </div>
 
             <div>
+
                 <img src="./images/facebook.svg" alt="fb" class="icon">
                 <img src="./images/instagram.svg" alt="insta" class="icon">
+
             </div>
 
             <div>
+
                 <p><img src="./images/copyright.svg" alt="cr" class="sm-icon"> 2020, Andrei Manache Romania</p>
+
             </div>
 
             <div>
+
                 <img src="./images/mastercard.svg" alt="mc" class="icon">
                 <img src="./images/paypal.svg" alt="pp" class="icon">
                 <img src="./images/visa.svg" alt="vs" class="icon">
+                
             </div>
+
         </div>
+
     </footer>
 
     <script src="./script.js"></script>
